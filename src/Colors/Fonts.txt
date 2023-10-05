@@ -1,0 +1,5 @@
+Typografie:
+
+Primární font: Roboto
+
+Sekundární font: Fira Code
