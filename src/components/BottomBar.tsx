@@ -23,7 +23,7 @@ export default function BottomBar() {
         borderColor: "#29962c",
       }}
     >
-      <BottomNavigation sx={{ backgroundColor: "#1E1E1E" }} showLabels>
+      <BottomNavigation sx={{ backgroundColor: "#121212" }} showLabels>
         <BottomNavigationAction
           label="Github"
           icon={<GitHubIcon sx={{ color: "#FFFFFF" }} />}

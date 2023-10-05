@@ -14,19 +14,24 @@ function ResponsiveAppBar() {
     <AppBar
       position="static"
       sx={{
-        backgroundColor: "#1E1E1E",
+        backgroundColor: "#121212",
         borderBottom: 3,
         borderColor: "#29962c",
       }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "flex" } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={() => {}}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  fontSize: "16px",
+                }}
               >
                 {page}
               </Button>
