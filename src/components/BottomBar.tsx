@@ -26,11 +26,13 @@ export default function BottomBar() {
       <BottomNavigation sx={{ backgroundColor: "#121212" }} showLabels>
         <BottomNavigationAction
           label="Github"
+          sx={{ color: "#FFFFFF" }}
           icon={<GitHubIcon sx={{ color: "#FFFFFF" }} />}
           onClick={() => redirectTo("https://github.com/RysanekDavid")}
         />
         <BottomNavigationAction
           label="LinkedIn"
+          sx={{ color: "#FFFFFF" }}
           icon={<LinkedInIcon sx={{ color: "#FFFFFF" }} />}
           onClick={() =>
             redirectTo(
@@ -40,11 +42,13 @@ export default function BottomBar() {
         />
         <BottomNavigationAction
           label="Email me"
+          sx={{ color: "#FFFFFF" }}
           icon={<EmailIcon sx={{ color: "#FFFFFF" }} />}
           onClick={() => redirectTo("mailto:rysanek.david.3@gmail.com")}
         />
         <BottomNavigationAction
           label="Phone"
+          sx={{ color: "#FFFFFF" }}
           icon={<CallIcon sx={{ color: "#FFFFFF" }} />}
           onClick={() => redirectTo("tel:+420 774 182 331")}
         />

@@ -71,13 +71,15 @@ function ResponsiveTopBar() {
                     backgroundColor:
                       selectedTab === index ? "#121212" : "#1E1E1E",
                     my: 1,
-                    mx: 1,
+                    mx: { xl: 0.3 },
                     whiteSpace: "nowrap",
                     borderTop: selectedTab === index ? 3 : 0,
                     borderLeft: selectedTab === index ? 3 : 0,
                     borderRight: selectedTab === index ? 3 : 0,
 
                     borderColor: "#29962c",
+                    borderTopLeftRadius: 16,
+                    borderTopRightRadius: 16,
                     fontSize: {
                       xl: "18px",
                       lg: "18px",
