@@ -11,12 +11,12 @@ import Tab from "@mui/material/Tab";
 
 const pages = ["About Me", "Resume", "Projects"];
 
-function ResponsiveTopBar() {
-  const [selectedTab, setSelectedTab] = React.useState(0);
-  const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
-    setSelectedTab(newValue);
-  };
+type Props = {
+  selectedTab: number;
+  onTabChange: (index: number) => void;
+};
 
+function ResponsiveTopBar({ selectedTab, onTabChange }: Props) {
   return (
     <AppBar
       position="static"
@@ -52,7 +52,7 @@ function ResponsiveTopBar() {
           >
             <Tabs
               value={selectedTab}
-              onChange={handleTabChange}
+              onChange={(event, newValue) => onTabChange(newValue)}
               centered={true}
               textColor="inherit"
               indicatorColor="primary"
