@@ -11,21 +11,27 @@ import {
   CardContent,
 } from "@mui/material";
 import resumeImage from "../assets/CV - David Ryšánek.jpg";
+import AvatarImage from "../assets/avatar1.jpg";
 
 function AboutMe() {
   return (
     <Box
-      sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
     >
       <Avatar
-        src="path_to_your_photo.jpg"
-        sx={{ width: 120, height: 120, mb: 2 }}
+        src={AvatarImage}
+        alt="David Ryšánek fotka"
+        sx={{ width: 160, height: 160, mb: 2, top: 10 }}
       />
       <Typography sx={{ color: "#FFFFFF" }} variant="h4">
-        Vaše Jméno
+        David Ryšánek
       </Typography>
       <Typography sx={{ color: "#FFFFFF" }} variant="subtitle1">
-        Něco o vás...
+        Něco o mně...
       </Typography>
     </Box>
   );

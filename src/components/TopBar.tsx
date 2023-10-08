@@ -44,7 +44,7 @@ function ResponsiveTopBar({ selectedTab, onTabChange }: Props) {
               justifyContent: {
                 xs: "center",
                 sm: "center",
-                md: "left",
+                md: "center",
                 lg: "left",
                 xl: "left",
               },
@@ -58,8 +58,8 @@ function ResponsiveTopBar({ selectedTab, onTabChange }: Props) {
               indicatorColor="primary"
               sx={{
                 "& .MuiTabs-indicator": {
-                  top: 0,
-                  display: "none",
+                  height: 8,
+                  backgroundColor: "#46b363",
                 },
               }}
             >
@@ -68,10 +68,11 @@ function ResponsiveTopBar({ selectedTab, onTabChange }: Props) {
                   key={index}
                   label={page}
                   sx={{
+                    minWidth: { xl: 200, lg: 200, md: 200, sm: 180, xs: 125 },
                     backgroundColor:
                       selectedTab === index ? "#121212" : "#1E1E1E",
                     my: 1,
-                    mx: { xl: 0.3 },
+                    mx: { xl: 0.3, lg: 0.3, md: 0.3, sm: 0.3, xs: 0.2 },
                     whiteSpace: "nowrap",
                     borderTop: selectedTab === index ? 3 : 0,
                     borderLeft: selectedTab === index ? 3 : 0,
@@ -81,7 +82,7 @@ function ResponsiveTopBar({ selectedTab, onTabChange }: Props) {
                     borderTopLeftRadius: 16,
                     borderTopRightRadius: 16,
                     fontSize: {
-                      xl: "18px",
+                      xl: "20px",
                       lg: "18px",
                       md: "16px",
                       sm: "16px",
