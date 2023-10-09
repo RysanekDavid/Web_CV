@@ -35,17 +35,6 @@ function AboutMe() {
       />
       <Typography
         sx={{
-          color: "#29962c",
-          paddingTop: 2,
-          fontFamily: "Roboto Slab",
-          fontSize: "36px",
-        }}
-        variant="h4"
-      >
-        David Ryšánek
-      </Typography>
-      <Typography
-        sx={{
           color: "#FFFFFF",
           justifyContent: "center",
           paddingLeft: 50,
@@ -60,6 +49,32 @@ function AboutMe() {
         graphic design. I create websites that are not only visually appealing
         but also user-focused and functional. My passion for graphic design
         translates into captivating visuals that effectively convey messages.
+      </Typography>
+      <Typography
+        sx={{
+          color: "#29962c",
+          paddingTop: 60,
+          fontFamily: "Roboto Slab",
+          fontSize: "36px",
+        }}
+        variant="h4"
+      >
+        About Me
+      </Typography>
+      Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Eum Voluptatibus
+      Dolores Aspernatur Animi Perferendis Iste! Culpa Aut Enim Debitis Optio
+      Illum Ipsum Quis Perferendis Dolor Expedita. Similique Necessitatibus
+      Inventore Doloremque.
+      <Typography
+        sx={{
+          color: "#29962c",
+          paddingTop: 2,
+          fontFamily: "Fira Code",
+          fontSize: "30px",
+        }}
+        variant="h4"
+      >
+        My Name Is David
       </Typography>
     </Box>
   );
