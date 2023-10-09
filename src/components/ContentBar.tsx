@@ -25,13 +25,41 @@ function AboutMe() {
       <Avatar
         src={AvatarImage}
         alt="David Ryšánek fotka"
-        sx={{ width: 160, height: 160, mb: 2, top: 10 }}
+        sx={{
+          width: 250,
+          height: 250,
+          mb: 2,
+          top: 20,
+          border: "4px solid #29962c",
+        }}
       />
-      <Typography sx={{ color: "#FFFFFF" }} variant="h4">
+      <Typography
+        sx={{
+          color: "#29962c",
+          paddingTop: 2,
+          fontFamily: "Roboto Slab",
+          fontSize: "36px",
+        }}
+        variant="h4"
+      >
         David Ryšánek
       </Typography>
-      <Typography sx={{ color: "#FFFFFF" }} variant="subtitle1">
-        Něco o mně...
+      <Typography
+        sx={{
+          color: "#FFFFFF",
+          justifyContent: "center",
+          paddingLeft: 50,
+          paddingRight: 50,
+          paddingTop: 2,
+          fontFamily: "Fira Code",
+          fontSize: "18px",
+        }}
+        variant="subtitle1"
+      >
+        In over 2 years in the digital field, I've mastered web development and
+        graphic design. I create websites that are not only visually appealing
+        but also user-focused and functional. My passion for graphic design
+        translates into captivating visuals that effectively convey messages.
       </Typography>
     </Box>
   );

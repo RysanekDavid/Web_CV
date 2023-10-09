@@ -33,7 +33,9 @@ export default function BottomBar() {
         <BottomNavigationAction
           label="LinkedIn"
           sx={{ color: "#FFFFFF" }}
-          icon={<LinkedInIcon sx={{ color: "#FFFFFF" }} />}
+          icon={
+            <LinkedInIcon sx={{ color: "#FFFFFF", fontFamily: "Fira Code" }} />
+          }
           onClick={() =>
             redirectTo(
               "https://www.linkedin.com/in/david-ry%C5%A1%C3%A1nek-aa088a20a/"
