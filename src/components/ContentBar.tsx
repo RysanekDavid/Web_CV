@@ -13,9 +13,14 @@ import Switch from "@mui/material/Switch";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Grow from "@mui/material/Grow";
+import Button from "@mui/material/Button";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import BackgroundImg from "../assets/BgAM.jpg";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import resumeImage from "../assets/CV - David Ryšánek.jpg";
 import AvatarImage from "../assets/avatar1.jpg";
+import SwipeDownTwoToneIcon from "@mui/icons-material/SwipeDownTwoTone";
+import { Opacity } from "@mui/icons-material";
 
 function AboutMe() {
   const [currentProfession, setCurrentProfession] = useState("Developer");
@@ -30,8 +35,8 @@ function AboutMe() {
         setProfessionIndex((prevIndex) => (prevIndex + 1) % professions.length);
         setCurrentProfession(professions[professionIndex]);
         setGrowVisible(true);
-      }, 600);
-    }, 3500);
+      }, 500);
+    }, 3400);
 
     return () => clearInterval(interval);
   }, [professionIndex]);
@@ -44,9 +49,21 @@ function AboutMe() {
         alignItems: "center",
       }}
     >
+      <Box
+        className="BgImg"
+        sx={{
+          backgroundImage: `url(${BackgroundImg})`,
+          position: "absolute",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          width: "100%",
+          height: "87vh",
+        }}
+      ></Box>
       <Avatar
         src={AvatarImage}
-        alt="David Ryšánek fotka"
+        alt="David Ryšánek photo"
         sx={{
           width: { xl: 250, lg: 250, md: 220, sm: 200, xs: 180 },
           height: { xl: 250, lg: 250, md: 220, sm: 200, xs: 180 },
@@ -56,9 +73,19 @@ function AboutMe() {
         }}
       />
 
+      <Typography
+        sx={{ color: "#FFFFFF", paddingTop: 12, fontFamily: "Fira Code" }}
+        variant="h5"
+      >
+        Hello I'm David Ryšánek
+      </Typography>
+
       <Box sx={{ height: "50px", position: "relative" }}>
-        <Grow in={growVisible} timeout={500}>
-          <Typography sx={{ color: "#29962c", paddingTop: 12 }} variant="h4">
+        <Grow in={growVisible} timeout={900}>
+          <Typography
+            sx={{ color: "#29962c", paddingTop: 4, fontFamily: "Fira Code" }}
+            variant="h4"
+          >
             {currentProfession}
           </Typography>
         </Grow>
@@ -70,11 +97,11 @@ function AboutMe() {
           justifyContent: "center",
           paddingLeft: { xl: 40, lg: 25, md: 16, sm: 10, xs: 4 },
           paddingRight: { xl: 40, lg: 25, md: 16, sm: 10, xs: 4 },
-          paddingTop: 16,
+          paddingTop: 8,
           fontFamily: "Fira Code",
-          fontSize: "19px",
+          fontSize: "18px",
         }}
-        variant="h6"
+        variant="h5"
       >
         In over 2 years in the digital field, I've mastered web development and
         graphic design. I create websites that are not only visually appealing
@@ -82,6 +109,31 @@ function AboutMe() {
         translates into captivating visuals that effectively convey messages.
       </Typography>
 
+      <Button
+        variant="contained"
+        sx={{
+          color: "#FFFFFF",
+          marginTop: 8,
+          border: "4px solid #29962c",
+          borderRadius: 8,
+          backgroundColor: "rgba(0, 0, 0, 0)",
+          fontFamily: "Fira Code",
+        }}
+      >
+        More About Me
+      </Button>
+      <SwipeDownTwoToneIcon
+        sx={{
+          color: "#29962c",
+          marginLeft: "auto",
+          display: "flex",
+          position: "absolute",
+          alignItems: "center",
+          marginTop: 92,
+          fontSize: 40,
+          cursor: "pointer",
+        }}
+      />
       <Typography
         sx={{
           color: "#29962c",
