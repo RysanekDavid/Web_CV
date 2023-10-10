@@ -1,6 +1,6 @@
 // AboutMe.tsx
+import * as React from "react";
 import {
-  Box,
   Typography,
   Avatar,
   List,
@@ -9,7 +9,11 @@ import {
   CardContent,
 } from "@mui/material";
 import { useEffect, useState, useMemo } from "react";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import Switch from "@mui/material/Switch";
+import Paper from "@mui/material/Paper";
+import Box from "@mui/material/Box";
+import Grow from "@mui/material/Grow";
+import FormControlLabel from "@mui/material/FormControlLabel";
 import resumeImage from "../assets/CV - David Ryšánek.jpg";
 import AvatarImage from "../assets/avatar1.jpg";
 
@@ -17,18 +21,20 @@ function AboutMe() {
   const [currentProfession, setCurrentProfession] = useState("Developer");
   const professions = useMemo(() => ["Developer", "Designer", "Analyst"], []);
   const [professionIndex, setProfessionIndex] = useState(0);
+  const [growVisible, setGrowVisible] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setProfessionIndex((prevIndex) => (prevIndex + 1) % professions.length);
-    }, 4000);
+      setGrowVisible(false);
+      setTimeout(() => {
+        setProfessionIndex((prevIndex) => (prevIndex + 1) % professions.length);
+        setCurrentProfession(professions[professionIndex]);
+        setGrowVisible(true);
+      }, 600);
+    }, 3500);
 
     return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    setCurrentProfession(professions[professionIndex]);
-  }, [professionIndex, professions]);
+  }, [professionIndex]);
 
   return (
     <Box
@@ -51,17 +57,11 @@ function AboutMe() {
       />
 
       <Box sx={{ height: "50px", position: "relative" }}>
-        <TransitionGroup>
-          <CSSTransition
-            key={currentProfession}
-            timeout={600}
-            classNames="slide"
-          >
-            <Typography sx={{ color: "#29962c", paddingTop: 12 }} variant="h4">
-              {currentProfession}
-            </Typography>
-          </CSSTransition>
-        </TransitionGroup>
+        <Grow in={growVisible} timeout={500}>
+          <Typography sx={{ color: "#29962c", paddingTop: 12 }} variant="h4">
+            {currentProfession}
+          </Typography>
+        </Grow>
       </Box>
 
       <Typography
