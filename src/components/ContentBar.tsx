@@ -62,10 +62,10 @@ function AboutMe() {
         src={AvatarImage}
         alt="David Ryšánek photo"
         sx={{
-          width: { xl: 250, lg: 250, md: 220, sm: 200, xs: 180 },
-          height: { xl: 250, lg: 250, md: 220, sm: 200, xs: 180 },
+          width: { xl: 250, lg: 250, md: 220, sm: 200, xs: 140 },
+          height: { xl: 250, lg: 250, md: 220, sm: 200, xs: 140 },
           mb: 2,
-          top: { xl: 80, lg: 80, md: 70, sm: 60, xs: 40 },
+          top: { xl: 80, lg: 80, md: 70, sm: 60, xs: 20 },
           border: "4px solid #29962c",
         }}
       />
@@ -73,23 +73,41 @@ function AboutMe() {
       <Typography
         sx={{
           color: "#EAEAEA",
-          paddingTop: { xl: 12, lg: 11, md: 10, sm: 9, xs: 8 },
+          paddingTop: { xl: 12, lg: 11, md: 10, sm: 9, xs: 4 },
           fontFamily: "Fira Code",
+          fontSize: { xl: 32, lg: 30, md: 28, sm: 26, xs: 20 },
         }}
         variant="h5"
       >
         Hello I'm David Ryšánek
       </Typography>
 
-      <Box sx={{ height: "50px", position: "relative" }}>
+      <Box
+        sx={{
+          height: {
+            xl: "50px",
+            lg: "50px",
+            md: "50px",
+            sm: "50px",
+            xs: "50px",
+          },
+          position: "relative",
+        }}
+      >
         <Grow in={growVisible} timeout={900}>
           <Typography
             sx={{
               color: "#29962c",
-              paddingTop: 3,
+              paddingTop: { xl: 3, lg: 3, md: 3, sm: 3, xs: 2 },
               fontFamily: "Fira Code",
               fontWeight: "bold",
-              fontSize: "38px",
+              fontSize: {
+                xl: "38px",
+                lg: "36px",
+                md: "34px",
+                sm: "32px",
+                xs: "30px",
+              },
             }}
             variant="h4"
           >
@@ -104,9 +122,15 @@ function AboutMe() {
           justifyContent: "center",
           paddingLeft: { xl: 40, lg: 25, md: 16, sm: 10, xs: 4 },
           paddingRight: { xl: 40, lg: 25, md: 16, sm: 10, xs: 4 },
-          paddingTop: 7,
+          paddingTop: { xl: 7, lg: 6, md: 5, sm: 4, xs: 3 },
           fontFamily: "Fira Code",
-          fontSize: "18px",
+          fontSize: {
+            xl: "18px",
+            lg: "18px",
+            md: "18px",
+            sm: "18px",
+            xs: "16px",
+          },
         }}
         variant="h5"
       >
@@ -120,7 +144,7 @@ function AboutMe() {
         variant="contained"
         sx={{
           color: "#EAEAEA",
-          marginTop: { xl: 7, lg: 6, md: 5, sm: 4, xs: 6 },
+          marginTop: { xl: 7, lg: 6, md: 5, sm: 4, xs: 4 },
           border: "3px solid #29962c",
           borderRadius: 8,
           backgroundColor: "rgba(0, 0, 0, 0)",
@@ -139,7 +163,7 @@ function AboutMe() {
           display: "flex",
           position: "absolute",
           alignItems: "center",
-          marginTop: { xl: 90, lg: 70, md: 60, sm: 50, xs: 90 },
+          marginTop: { xl: 90, lg: 70, md: 60, sm: 50, xs: 73 },
           fontSize: 40,
           cursor: "pointer",
         }}
