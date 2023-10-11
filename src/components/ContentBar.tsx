@@ -8,7 +8,7 @@ import Button from "@mui/material/Button";
 import BackgroundImg from "../assets/BgAM.jpg";
 import resumeImage from "../assets/CV - David Ryšánek.jpg";
 import AvatarImage from "../assets/A6.jpg";
-import Hidden from "@mui/material/Hidden";
+
 import ArrowDropDownCircleOutlinedIcon from "@mui/icons-material/ArrowDropDownCircleOutlined";
 
 function AboutMe() {
@@ -54,10 +54,10 @@ function AboutMe() {
         src={AvatarImage}
         alt="David Ryšánek photo"
         sx={{
-          width: { xl: 250, lg: 250, md: 220, sm: 200, xs: 140 },
-          height: { xl: 250, lg: 250, md: 220, sm: 200, xs: 140 },
+          width: { xl: 250, lg: 250, md: 220, sm: 180, xs: 140 },
+          height: { xl: 250, lg: 250, md: 220, sm: 180, xs: 140 },
           mb: 2,
-          top: { xl: 80, lg: 80, md: 70, sm: 60, xs: 20 },
+          top: { xl: 80, lg: 80, md: 70, sm: 60, xs: 30 },
           border: "4px solid #29962c",
         }}
       />
@@ -65,9 +65,9 @@ function AboutMe() {
       <Typography
         sx={{
           color: "#EAEAEA",
-          paddingTop: { xl: 12, lg: 11, md: 10, sm: 9, xs: 4 },
+          paddingTop: { xl: 12, lg: 11, md: 10, sm: 9, xs: 5 },
           fontFamily: "Fira Code",
-          fontSize: { xl: 32, lg: 30, md: 28, sm: 26, xs: 20 },
+          fontSize: { xl: 32, lg: 30, md: 28, sm: 24, xs: 20 },
         }}
         variant="h5"
       >
@@ -112,16 +112,16 @@ function AboutMe() {
         sx={{
           color: "#EAEAEA",
           justifyContent: "center",
-          paddingLeft: { xl: 40, lg: 25, md: 16, sm: 10, xs: 4 },
-          paddingRight: { xl: 40, lg: 25, md: 16, sm: 10, xs: 4 },
+          paddingLeft: { xl: 40, lg: 20, md: 16, sm: 10, xs: 4 },
+          paddingRight: { xl: 40, lg: 20, md: 16, sm: 10, xs: 4 },
           paddingTop: { xl: 7, lg: 6, md: 5, sm: 4, xs: 3 },
           fontFamily: "Fira Code",
           fontSize: {
-            xl: "18px",
+            xl: "20px",
             lg: "18px",
             md: "18px",
             sm: "18px",
-            xs: "16px",
+            xs: "17px",
           },
         }}
         variant="h5"
@@ -133,10 +133,14 @@ function AboutMe() {
       </Typography>
 
       <Button
-        variant="contained"
+        onClick={() => {
+          document
+            .getElementById("About_Me")
+            ?.scrollIntoView({ behavior: "smooth" });
+        }}
         sx={{
           color: "#EAEAEA",
-          marginTop: { xl: 7, lg: 6, md: 5, sm: 4, xs: 3 },
+          marginTop: { xl: 6, lg: 6, md: 5, sm: 4, xs: 3 },
           border: "3px solid #29962c",
           borderRadius: 8,
           backgroundColor: "rgba(0, 0, 0, 0)",
@@ -149,27 +153,34 @@ function AboutMe() {
         More About Me
       </Button>
       <ArrowDropDownCircleOutlinedIcon
+        onClick={() => {
+          document
+            .getElementById("About_Me")
+            ?.scrollIntoView({ behavior: "smooth" });
+        }}
         sx={{
           color: "#29962c",
           display: {
             xl: "flex",
             lg: "flex",
             md: "flex",
-            sm: "flex",
+            sm: "none",
             xs: "none",
           },
           position: "absolute",
           alignItems: "center",
-          marginTop: { xl: 90, lg: 70, md: 60, sm: 50, xs: 65 },
+          marginTop: { xl: 90, lg: 90, md: 84 },
 
           fontSize: { xl: 38, lg: 38, md: 38, sm: 38, xs: 34 },
           cursor: "pointer",
         }}
       />
       <Typography
+        id="About_Me"
+        className="About_Me_Text"
         sx={{
           color: "#29962c",
-          paddingTop: 45,
+          paddingTop: 32,
           fontFamily: "Roboto Slab",
           fontSize: "36px",
         }}
