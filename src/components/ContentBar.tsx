@@ -1,23 +1,15 @@
 // AboutMe.tsx
 import * as React from "react";
-import {
-  Typography,
-  Avatar,
-  List,
-  Grid,
-  Card,
-  CardContent,
-} from "@mui/material";
+import { Typography, Avatar, Grid, Card, CardContent } from "@mui/material";
 import { useEffect, useState, useMemo } from "react";
-import Switch from "@mui/material/Switch";
-import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Grow from "@mui/material/Grow";
 import Button from "@mui/material/Button";
 import BackgroundImg from "../assets/BgAM.jpg";
 import resumeImage from "../assets/CV - David Ryšánek.jpg";
-import SwipeDownTwoToneIcon from "@mui/icons-material/SwipeDownTwoTone";
 import AvatarImage from "../assets/A6.jpg";
+import Hidden from "@mui/material/Hidden";
+import ArrowDropDownCircleOutlinedIcon from "@mui/icons-material/ArrowDropDownCircleOutlined";
 
 function AboutMe() {
   const [currentProfession, setCurrentProfession] = useState("Developer");
@@ -36,7 +28,7 @@ function AboutMe() {
     }, 3400);
 
     return () => clearInterval(interval);
-  }, [professionIndex]);
+  }, [professionIndex, professions]);
 
   return (
     <Box
@@ -144,7 +136,7 @@ function AboutMe() {
         variant="contained"
         sx={{
           color: "#EAEAEA",
-          marginTop: { xl: 7, lg: 6, md: 5, sm: 4, xs: 4 },
+          marginTop: { xl: 7, lg: 6, md: 5, sm: 4, xs: 3 },
           border: "3px solid #29962c",
           borderRadius: 8,
           backgroundColor: "rgba(0, 0, 0, 0)",
@@ -156,15 +148,21 @@ function AboutMe() {
       >
         More About Me
       </Button>
-      <SwipeDownTwoToneIcon
+      <ArrowDropDownCircleOutlinedIcon
         sx={{
           color: "#29962c",
-          marginLeft: "auto",
-          display: "flex",
+          display: {
+            xl: "flex",
+            lg: "flex",
+            md: "flex",
+            sm: "flex",
+            xs: "none",
+          },
           position: "absolute",
           alignItems: "center",
-          marginTop: { xl: 90, lg: 70, md: 60, sm: 50, xs: 73 },
-          fontSize: 40,
+          marginTop: { xl: 90, lg: 70, md: 60, sm: 50, xs: 65 },
+
+          fontSize: { xl: 38, lg: 38, md: 38, sm: 38, xs: 34 },
           cursor: "pointer",
         }}
       />

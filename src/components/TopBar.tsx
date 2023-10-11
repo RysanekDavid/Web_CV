@@ -19,7 +19,7 @@ type Props = {
 function ResponsiveTopBar({ selectedTab, onTabChange }: Props) {
   return (
     <AppBar
-      position="static"
+      position="sticky"
       sx={{
         backgroundColor: "#121212",
         borderBottom: 3,
