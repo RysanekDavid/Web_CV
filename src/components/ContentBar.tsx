@@ -14,13 +14,10 @@ import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Grow from "@mui/material/Grow";
 import Button from "@mui/material/Button";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import BackgroundImg from "../assets/BgAM.jpg";
-import FormControlLabel from "@mui/material/FormControlLabel";
 import resumeImage from "../assets/CV - David Ryšánek.jpg";
-import AvatarImage from "../assets/avatar1.jpg";
 import SwipeDownTwoToneIcon from "@mui/icons-material/SwipeDownTwoTone";
-import { Opacity } from "@mui/icons-material";
+import AvatarImage from "../assets/A6.jpg";
 
 function AboutMe() {
   const [currentProfession, setCurrentProfession] = useState("Developer");
@@ -68,13 +65,17 @@ function AboutMe() {
           width: { xl: 250, lg: 250, md: 220, sm: 200, xs: 180 },
           height: { xl: 250, lg: 250, md: 220, sm: 200, xs: 180 },
           mb: 2,
-          top: 80,
+          top: { xl: 80, lg: 80, md: 70, sm: 60, xs: 40 },
           border: "4px solid #29962c",
         }}
       />
 
       <Typography
-        sx={{ color: "#FFFFFF", paddingTop: 12, fontFamily: "Fira Code" }}
+        sx={{
+          color: "#EAEAEA",
+          paddingTop: { xl: 12, lg: 11, md: 10, sm: 9, xs: 8 },
+          fontFamily: "Fira Code",
+        }}
         variant="h5"
       >
         Hello I'm David Ryšánek
@@ -83,7 +84,13 @@ function AboutMe() {
       <Box sx={{ height: "50px", position: "relative" }}>
         <Grow in={growVisible} timeout={900}>
           <Typography
-            sx={{ color: "#29962c", paddingTop: 4, fontFamily: "Fira Code" }}
+            sx={{
+              color: "#29962c",
+              paddingTop: 3,
+              fontFamily: "Fira Code",
+              fontWeight: "bold",
+              fontSize: "38px",
+            }}
             variant="h4"
           >
             {currentProfession}
@@ -93,11 +100,11 @@ function AboutMe() {
 
       <Typography
         sx={{
-          color: "#FFFFFF",
+          color: "#EAEAEA",
           justifyContent: "center",
           paddingLeft: { xl: 40, lg: 25, md: 16, sm: 10, xs: 4 },
           paddingRight: { xl: 40, lg: 25, md: 16, sm: 10, xs: 4 },
-          paddingTop: 8,
+          paddingTop: 7,
           fontFamily: "Fira Code",
           fontSize: "18px",
         }}
@@ -112,12 +119,15 @@ function AboutMe() {
       <Button
         variant="contained"
         sx={{
-          color: "#FFFFFF",
-          marginTop: 8,
-          border: "4px solid #29962c",
+          color: "#EAEAEA",
+          marginTop: { xl: 7, lg: 6, md: 5, sm: 4, xs: 6 },
+          border: "3px solid #29962c",
           borderRadius: 8,
           backgroundColor: "rgba(0, 0, 0, 0)",
           fontFamily: "Fira Code",
+          "&:hover": {
+            backgroundColor: "rgba(46, 42, 40, 0.8)",
+          },
         }}
       >
         More About Me
@@ -129,7 +139,7 @@ function AboutMe() {
           display: "flex",
           position: "absolute",
           alignItems: "center",
-          marginTop: 92,
+          marginTop: { xl: 90, lg: 70, md: 60, sm: 50, xs: 90 },
           fontSize: 40,
           cursor: "pointer",
         }}
