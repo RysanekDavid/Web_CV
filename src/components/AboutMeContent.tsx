@@ -36,8 +36,9 @@ export function AboutMe() {
         display: "flex",
         flexDirection: "column",
         position: "absolute",
+        left: "1%",
         zIndex: 1,
-        width: "100%",
+        width: "98%",
         height: "86%",
       }}
     >
@@ -60,9 +61,9 @@ export function AboutMe() {
         src={AvatarImage}
         alt="David Ryšánek photo"
         sx={{
-          width: { xl: "25vh", lg: 210, md: 200, sm: 180, xs: 140 },
-          height: { xl: "25vh", lg: 210, md: 200, sm: 180, xs: 140 },
-          top: { xl: "6vh", lg: 10, md: 70, sm: 60, xs: "54%" },
+          width: { xl: "25vh", lg: "20vh", md: 200, sm: 180, xs: 140 },
+          height: { xl: "25vh", lg: "20vh", md: 200, sm: 180, xs: 140 },
+          top: { xl: "6vh", lg: "6vh", md: 70, sm: 60, xs: "54%" },
           border: "4px solid #29962c",
           position: "absolute",
           zIndex: 2,
@@ -76,7 +77,7 @@ export function AboutMe() {
           fontSize: { xl: "3vh", lg: 30, md: 28, sm: 24, xs: 20 },
           display: "block",
           position: "absolute",
-          top: { xl: "36vh", lg: 150, md: 70, sm: 60, xs: "54%" },
+          top: { xl: "36vh", lg: "30vh", md: 70, sm: 60, xs: "54%" },
           zIndex: 2,
         }}
         variant="h5"
@@ -84,46 +85,42 @@ export function AboutMe() {
         Hello I'm David Ryšánek
       </Typography>
 
-      <Box
-        sx={{
-          position: "absolute",
-          zIndex: 2,
-        }}
-      >
-        <Grow in={growVisible} timeout={700}>
-          <Typography
-            sx={{
-              color: "#29962c",
-              paddingTop: { xl: "7vh", lg: 0, md: 0, sm: 0, xs: 0 },
-              fontFamily: "Fira Code",
-              display: "block",
-              zIndex: 2,
-              fontSize: {
-                xl: "5vh",
-                lg: "36px",
-                md: "34px",
-                sm: "32px",
-                xs: "30px",
-              },
-            }}
-            variant="h4"
-          >
-            {currentProfession}
-          </Typography>
-        </Grow>
-      </Box>
+      <Grow in={growVisible} timeout={700}>
+        <Typography
+          sx={{
+            color: "#29962c",
+
+            top: { xl: "43vh", lg: "38vh", md: 70, sm: 60, xs: "54%" },
+            textAlign: "center",
+            fontFamily: "Fira Code",
+            display: "block",
+            position: "absolute",
+            zIndex: 2,
+            fontSize: {
+              xl: "6vh",
+              lg: "5vh",
+              md: "34px",
+              sm: "32px",
+              xs: "30px",
+            },
+          }}
+          variant="h4"
+        >
+          {currentProfession}
+        </Typography>
+      </Grow>
 
       <Typography
         sx={{
           color: "#EAEAEA",
           justifyContent: "center",
-          paddingLeft: { xl: 30, lg: 20, md: 16, sm: 10, xs: 4 },
-          paddingRight: { xl: 30, lg: 20, md: 16, sm: 10, xs: 4 },
-          paddingTop: { xl: 34, lg: 6, md: 5, sm: 4, xs: 3 },
+          paddingLeft: { xl: "13vw", lg: "10vw", md: 16, sm: 10, xs: 4 },
+          paddingRight: { xl: "13vw", lg: "10vw", md: 16, sm: 10, xs: 4 },
+          paddingTop: { xl: "30vh", lg: "22vh", md: 5, sm: 4, xs: 3 },
           fontFamily: "Fira Code",
           fontSize: {
             xl: "2.5vh",
-            lg: "18px",
+            lg: "1.4vw",
             md: "18px",
             sm: "18px",
             xs: "17px",
@@ -149,7 +146,7 @@ export function AboutMe() {
         }}
         sx={{
           color: "#EAEAEA",
-          marginTop: { xl: 62, lg: 6, md: 5, sm: 4, xs: 3 },
+          marginTop: { xl: "55vh", lg: "30vw", md: 5, sm: 4, xs: 3 },
           border: "3px solid #29962c",
           borderRadius: 6,
           zIndex: 2,
@@ -179,7 +176,7 @@ export function AboutMe() {
           },
           position: "absolute",
           alignItems: "center",
-          marginTop: { xl: 80, lg: 76, md: 84 },
+          marginTop: { xl: "70vh", lg: "40vw", md: 84 },
           zIndex: 2,
 
           fontSize: { xl: 38, lg: 38, md: 38, sm: 38, xs: 34 },
