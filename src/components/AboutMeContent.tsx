@@ -1,30 +1,19 @@
-// AboutMe.tsx
-//import * as React from "react";
-import { Typography, Avatar, Grid, Card, CardContent } from "@mui/material";
+import { Typography, Avatar } from "@mui/material";
 import { useEffect, useState, useMemo } from "react";
 import Box from "@mui/material/Box";
 import Grow from "@mui/material/Grow";
 import Button from "@mui/material/Button";
 import BackgroundImg from "../assets/BgAM.jpg";
-import resumeImage from "../assets/CV - David Ryšánek.jpg";
 import AvatarImage from "../assets/A6.jpg";
-
 import ArrowDropDownCircleOutlinedIcon from "@mui/icons-material/ArrowDropDownCircleOutlined";
 
-//import { Bounce } from "react-awesome-reveal";
-import { Fade } from "react-awesome-reveal";
-//import { Flip } from "react-awesome-reveal";
-//import { Hinge } from "react-awesome-reveal";
-//import { JackInTheBox } from "react-awesome-reveal";
-//import { Slide } from "react-awesome-reveal";
-//import { Roll } from "react-awesome-reveal";
+//import { Fade } from "react-awesome-reveal";
 
-function AboutMe() {
+export function AboutMe() {
   const [currentProfession, setCurrentProfession] = useState("Developer");
   const professions = useMemo(() => ["Developer", "Designer", "Analyst"], []);
   const [professionIndex, setProfessionIndex] = useState(0);
   const [growVisible, setGrowVisible] = useState(true);
-  // const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -42,11 +31,14 @@ function AboutMe() {
   return (
     <Box
       sx={{
-        display: "flex",
-        flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        position: "absolute",
+        zIndex: 1,
+        width: "100%",
+        height: "86%",
       }}
     >
       <Box
@@ -58,7 +50,9 @@ function AboutMe() {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           width: "100%",
-          height: "90%",
+          height: "100%",
+          zIndex: 0,
+          top: 0,
           marginBottom: { xl: 22, lg: 5, md: 5, sm: 5, xs: 5 },
         }}
       ></Box>
@@ -68,18 +62,22 @@ function AboutMe() {
         sx={{
           width: { xl: 230, lg: 210, md: 200, sm: 180, xs: 140 },
           height: { xl: 230, lg: 210, md: 200, sm: 180, xs: 140 },
-          mb: 2,
-          top: { xl: "40%", lg: 150, md: 70, sm: 60, xs: "54%" },
+          top: { xl: 70, lg: 150, md: 70, sm: 60, xs: "54%" },
           border: "4px solid #29962c",
+          position: "absolute",
+          zIndex: 2,
         }}
       />
 
       <Typography
         sx={{
           color: "#EAEAEA",
-          paddingTop: { xl: 44, lg: 8, md: 10, sm: 9, xs: 65 },
           fontFamily: "Fira Code",
-          fontSize: { xl: 32, lg: 30, md: 28, sm: 24, xs: 20 },
+          fontSize: { xl: 30, lg: 30, md: 28, sm: 24, xs: 20 },
+          display: "block",
+          position: "absolute",
+          top: { xl: 350, lg: 150, md: 70, sm: 60, xs: "54%" },
+          zIndex: 2,
         }}
         variant="h5"
       >
@@ -88,25 +86,20 @@ function AboutMe() {
 
       <Box
         sx={{
-          height: {
-            xl: "50px",
-            lg: "50px",
-            md: "50px",
-            sm: "50px",
-            xs: "50px",
-          },
-          position: "relative",
+          position: "absolute",
+          zIndex: 2,
         }}
       >
-        <Grow in={growVisible} timeout={900}>
+        <Grow in={growVisible} timeout={700}>
           <Typography
             sx={{
               color: "#29962c",
-              paddingTop: { xl: 3, lg: 3, md: 3, sm: 3, xs: 2 },
+              paddingTop: { xl: 9, lg: 0, md: 0, sm: 0, xs: 0 },
               fontFamily: "Fira Code",
-              fontWeight: "bold",
+              display: "block",
+              zIndex: 2,
               fontSize: {
-                xl: "38px",
+                xl: "42px",
                 lg: "36px",
                 md: "34px",
                 sm: "32px",
@@ -124,9 +117,9 @@ function AboutMe() {
         sx={{
           color: "#EAEAEA",
           justifyContent: "center",
-          paddingLeft: { xl: 40, lg: 20, md: 16, sm: 10, xs: 4 },
-          paddingRight: { xl: 40, lg: 20, md: 16, sm: 10, xs: 4 },
-          paddingTop: { xl: 7, lg: 6, md: 5, sm: 4, xs: 3 },
+          paddingLeft: { xl: 30, lg: 20, md: 16, sm: 10, xs: 4 },
+          paddingRight: { xl: 30, lg: 20, md: 16, sm: 10, xs: 4 },
+          paddingTop: { xl: 34, lg: 6, md: 5, sm: 4, xs: 3 },
           fontFamily: "Fira Code",
           fontSize: {
             xl: "20px",
@@ -135,6 +128,10 @@ function AboutMe() {
             sm: "18px",
             xs: "17px",
           },
+          display: "block",
+          position: "absolute",
+          textAlign: "center",
+          zIndex: 2,
         }}
         variant="h5"
       >
@@ -152,9 +149,10 @@ function AboutMe() {
         }}
         sx={{
           color: "#EAEAEA",
-          marginTop: { xl: 6, lg: 6, md: 5, sm: 4, xs: 3 },
+          marginTop: { xl: 62, lg: 6, md: 5, sm: 4, xs: 3 },
           border: "3px solid #29962c",
-          borderRadius: 8,
+          borderRadius: 6,
+          zIndex: 2,
           backgroundColor: "rgba(0, 0, 0, 0)",
           fontFamily: "Fira Code",
           "&:hover": {
@@ -181,82 +179,13 @@ function AboutMe() {
           },
           position: "absolute",
           alignItems: "center",
-          marginTop: { xl: 86, lg: 76, md: 84 },
+          marginTop: { xl: 80, lg: 76, md: 84 },
+          zIndex: 2,
 
           fontSize: { xl: 38, lg: 38, md: 38, sm: 38, xs: 34 },
           cursor: "pointer",
         }}
       />
-
-      <Fade triggerOnce>
-        <Typography
-          id="About_Me"
-          className="About_Me_Text"
-          sx={{
-            color: "#29962c",
-            paddingTop: 32,
-            fontFamily: "Roboto Slab",
-            fontSize: "36px",
-          }}
-          variant="h4"
-        >
-          About Me
-        </Typography>
-      </Fade>
-
-      <Typography
-        sx={{
-          color: "#29962c",
-          paddingTop: 75,
-          fontFamily: "Fira Code",
-          fontSize: "20px",
-        }}
-        variant="h4"
-      >
-        Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Eum
-        Voluptatibus Dolores Aspernatur Animi Perferendis Iste! Culpa Aut Enim
-        Debitis Optio Illum Ipsum Quis Perferendis Dolor Expedita. Similique
-        Necessitatibus Inventore Doloremque.
-      </Typography>
     </Box>
   );
 }
-
-// Resume.tsx
-
-function Resume() {
-  return (
-    <Box>
-      <Typography sx={{ color: "#FFFFFF" }} variant="h5">
-        My CV
-      </Typography>
-      <img
-        src={resumeImage}
-        alt="Můj životopis"
-        style={{ width: "50%", height: "auto", color: "#FFFFFF" }}
-      />
-    </Box>
-  );
-}
-
-// Projects.tsx
-
-function Projects() {
-  return (
-    <Box>
-      <Typography variant="h5">Moje Projekty</Typography>
-      <Grid container spacing={2}>
-        <Grid item xs={12} sm={6} md={4}>
-          <Card>
-            <CardContent>
-              <Typography variant="h6">Název projektu</Typography>
-              <Typography variant="body2">Popis projektu...</Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-      </Grid>
-    </Box>
-  );
-}
-
-export { AboutMe, Resume, Projects };

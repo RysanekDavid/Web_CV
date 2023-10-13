@@ -19,11 +19,14 @@ type Props = {
 function ResponsiveTopBar({ selectedTab, onTabChange }: Props) {
   return (
     <AppBar
-      position="sticky"
       sx={{
         backgroundColor: "#121212",
         borderBottom: 3,
-        borderColor: "#29962c",
+        borderTop: 3,
+        borderBottomColor: "#29962c",
+        borderTopColor: "#000000",
+
+        position: "sticky",
       }}
     >
       <Container maxWidth="xl">
