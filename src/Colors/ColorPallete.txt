@@ -1,0 +1,36 @@
+<b><h4>Primární tmavá barva:</h4></b>
+
+HEX: #121212
+RGB: 18, 18, 18
+Popis: Téměř černá, hlavní barva pozadí.
+
+<b><h4>Sekundární tmavá barva:</h4></b>
+
+HEX: #1E1E1E
+RGB: 30, 30, 30
+Popis: Světlejší šedá, pozadí kartiček, postranních panelů atd.
+
+<b><h4>Primární akcentová barva:</h4></b>
+
+HEX: #29962c
+RGB: 41, 150, 44
+Popis: Střední zelená
+
+<b><h4>Textová barva:</h4></b>
+
+<table>
+<th>HEX: #EAEAEA</th>
+<th>RGB: 234, 234, 234</th>
+<th>Popis: Světlá šedá, vhodná pro hlavní text na tmavém pozadí.</th>
+</tr>
+</table>
+
+<b><h4>Další textová barva:</h4></b>
+
+<table>
+
+<th>HEX: #B0B0B0</th>
+<th>RGB: 176, 176, 176</th>
+<th>Popis: Střední šedá pro méně důležitý text, popisky nebo poznámky pod čarou.</th>
+
+</table>
