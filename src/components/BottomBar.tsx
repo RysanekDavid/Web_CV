@@ -21,7 +21,7 @@ export default function BottomBar() {
         bottom: 0,
         borderTop: 3,
         borderColor: "#29962c",
-        zIndex: 1,
+        zIndex: 2,
       }}
     >
       <BottomNavigation sx={{ backgroundColor: "#121212" }} showLabels>

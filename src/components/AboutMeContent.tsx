@@ -60,9 +60,9 @@ export function AboutMe() {
         src={AvatarImage}
         alt="David Ryšánek photo"
         sx={{
-          width: { xl: 20, lg: 210, md: 200, sm: 180, xs: 140 },
-          height: { xl: 230, lg: 210, md: 200, sm: 180, xs: 140 },
-          top: { xl: 70, lg: 10, md: 70, sm: 60, xs: "54%" },
+          width: { xl: "25vh", lg: 210, md: 200, sm: 180, xs: 140 },
+          height: { xl: "25vh", lg: 210, md: 200, sm: 180, xs: 140 },
+          top: { xl: "6vh", lg: 150, lg: 10, md: 70, sm: 60, xs: "54%" },
           border: "4px solid #29962c",
           position: "absolute",
           zIndex: 2,
@@ -73,10 +73,10 @@ export function AboutMe() {
         sx={{
           color: "#EAEAEA",
           fontFamily: "Fira Code",
-          fontSize: { xl: 30, lg: 30, md: 28, sm: 24, xs: 20 },
+          fontSize: { xl: "3vh", lg: 30, md: 28, sm: 24, xs: 20 },
           display: "block",
           position: "absolute",
-          top: { xl: 350, lg: 150, md: 70, sm: 60, xs: "54%" },
+          top: { xl: "36vh", lg: 150, md: 70, sm: 60, xs: "54%" },
           zIndex: 2,
         }}
         variant="h5"
@@ -94,12 +94,12 @@ export function AboutMe() {
           <Typography
             sx={{
               color: "#29962c",
-              paddingTop: { xl: 9, lg: 0, md: 0, sm: 0, xs: 0 },
+              paddingTop: { xl: "7vh", lg: 0, md: 0, sm: 0, xs: 0 },
               fontFamily: "Fira Code",
               display: "block",
               zIndex: 2,
               fontSize: {
-                xl: "42px",
+                xl: "5vh",
                 lg: "36px",
                 md: "34px",
                 sm: "32px",
@@ -122,7 +122,7 @@ export function AboutMe() {
           paddingTop: { xl: 34, lg: 6, md: 5, sm: 4, xs: 3 },
           fontFamily: "Fira Code",
           fontSize: {
-            xl: "20px",
+            xl: "2.5vh",
             lg: "18px",
             md: "18px",
             sm: "18px",
