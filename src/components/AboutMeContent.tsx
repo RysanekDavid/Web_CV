@@ -62,7 +62,7 @@ export function AboutMe() {
         sx={{
           width: { xl: "25vh", lg: 210, md: 200, sm: 180, xs: 140 },
           height: { xl: "25vh", lg: 210, md: 200, sm: 180, xs: 140 },
-          top: { xl: "6vh", lg: 150, lg: 10, md: 70, sm: 60, xs: "54%" },
+          top: { xl: "6vh", lg: 10, md: 70, sm: 60, xs: "54%" },
           border: "4px solid #29962c",
           position: "absolute",
           zIndex: 2,
