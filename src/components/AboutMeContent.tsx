@@ -6,6 +6,8 @@ import Button from "@mui/material/Button";
 import BackgroundImg from "../assets/BgAM.jpg";
 import AvatarImage from "../assets/A6.jpg";
 import ArrowDropDownCircleOutlinedIcon from "@mui/icons-material/ArrowDropDownCircleOutlined";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 //import { Fade } from "react-awesome-reveal";
 
@@ -14,6 +16,9 @@ export function AboutMe() {
   const professions = useMemo(() => ["Developer", "Designer", "Analyst"], []);
   const [professionIndex, setProfessionIndex] = useState(0);
   const [growVisible, setGrowVisible] = useState(true);
+  const theme = useTheme();
+
+  const isSmallScreenOrDown = useMediaQuery(theme.breakpoints.down("md"));
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -61,9 +66,15 @@ export function AboutMe() {
         src={AvatarImage}
         alt="David Ryšánek photo"
         sx={{
-          width: { xl: "25vh", lg: "20vh", md: 200, sm: 180, xs: 140 },
-          height: { xl: "25vh", lg: "20vh", md: 200, sm: 180, xs: 140 },
-          top: { xl: "6vh", lg: "6vh", md: 70, sm: 60, xs: "54%" },
+          width: { xl: "25vh", lg: "20vh", md: "20vh", sm: "20vh", xs: "16vh" },
+          height: {
+            xl: "25vh",
+            lg: "20vh",
+            md: "20vh",
+            sm: "20vh",
+            xs: "16vh",
+          },
+          top: { xl: "6vh", lg: "6vh", md: "5vh", sm: "6vh", xs: "6vh" },
           border: "4px solid #29962c",
           position: "absolute",
           zIndex: 2,
@@ -74,10 +85,16 @@ export function AboutMe() {
         sx={{
           color: "#EAEAEA",
           fontFamily: "Fira Code",
-          fontSize: { xl: "3vh", lg: 30, md: 28, sm: 24, xs: 20 },
+          fontSize: {
+            xl: "3vh",
+            lg: "3vh",
+            md: "2.8vh",
+            sm: "3.8vw",
+            xs: "5.6vw",
+          },
           display: "block",
           position: "absolute",
-          top: { xl: "36vh", lg: "30vh", md: 70, sm: 60, xs: "54%" },
+          top: { xl: "36vh", lg: "30vh", md: "30vh", sm: "30vh", xs: "26vh" },
           zIndex: 2,
         }}
         variant="h5"
@@ -90,7 +107,7 @@ export function AboutMe() {
           sx={{
             color: "#29962c",
 
-            top: { xl: "43vh", lg: "38vh", md: 70, sm: 60, xs: "54%" },
+            top: { xl: "43vh", lg: "38vh", md: "38vh", sm: "38vh", xs: "34vh" },
             textAlign: "center",
             fontFamily: "Fira Code",
             display: "block",
@@ -99,9 +116,9 @@ export function AboutMe() {
             fontSize: {
               xl: "6vh",
               lg: "5vh",
-              md: "34px",
-              sm: "32px",
-              xs: "30px",
+              md: "4vh",
+              sm: "4vh",
+              xs: "8vw",
             },
           }}
           variant="h4"
@@ -114,16 +131,34 @@ export function AboutMe() {
         sx={{
           color: "#EAEAEA",
           justifyContent: "center",
-          paddingLeft: { xl: "13vw", lg: "10vw", md: 16, sm: 10, xs: 4 },
-          paddingRight: { xl: "13vw", lg: "10vw", md: 16, sm: 10, xs: 4 },
-          paddingTop: { xl: "30vh", lg: "22vh", md: 5, sm: 4, xs: 3 },
+          paddingLeft: {
+            xl: "13vw",
+            lg: "10vw",
+            md: "7vw",
+            sm: "6vw",
+            xs: "5vw",
+          },
+          paddingRight: {
+            xl: "13vw",
+            lg: "10vw",
+            md: "7vw",
+            sm: "6vw",
+            xs: "5vw",
+          },
+          paddingTop: {
+            xl: "30vh",
+            lg: "20vh",
+            md: "18vh",
+            sm: "24vh",
+            xs: "20vh",
+          },
           fontFamily: "Fira Code",
           fontSize: {
             xl: "2.5vh",
             lg: "1.4vw",
-            md: "18px",
-            sm: "18px",
-            xs: "17px",
+            md: "1.9vh",
+            sm: "2vh",
+            xs: "3.5vw",
           },
           display: "block",
           position: "absolute",
@@ -146,10 +181,25 @@ export function AboutMe() {
         }}
         sx={{
           color: "#EAEAEA",
-          marginTop: { xl: "55vh", lg: "30vw", md: 5, sm: 4, xs: 3 },
+          marginTop: {
+            xl: "56vh",
+            lg: "44vh",
+            md: "44vh",
+            sm: "60vh",
+            xs: "58vh",
+          },
           border: "3px solid #29962c",
           borderRadius: 6,
+          width: { xl: "10vw", lg: "12vw", md: "18vw", sm: "22vw", xs: "30vw" },
+          height: { xl: "5.5vh", lg: "5vh", md: "6vh", sm: "8vh", xs: "8vh" },
           zIndex: 2,
+          fontSize: {
+            xl: "1vw",
+            lg: "1.2vw",
+            md: "2vw",
+            sm: "3vw",
+            xs: "3.6vw",
+          },
           backgroundColor: "rgba(0, 0, 0, 0)",
           fontFamily: "Fira Code",
           "&:hover": {
@@ -157,7 +207,7 @@ export function AboutMe() {
           },
         }}
       >
-        More About Me
+        {isSmallScreenOrDown ? "Resume" : "Show Resume"}
       </Button>
       <ArrowDropDownCircleOutlinedIcon
         onClick={() => {
@@ -176,10 +226,10 @@ export function AboutMe() {
           },
           position: "absolute",
           alignItems: "center",
-          marginTop: { xl: "70vh", lg: "40vw", md: 84 },
+          marginTop: { xl: "70vh", lg: "56vh", md: "56vh" },
           zIndex: 2,
 
-          fontSize: { xl: 38, lg: 38, md: 38, sm: 38, xs: 34 },
+          fontSize: { xl: "2.6vw", lg: "3vw", md: "4vw" },
           cursor: "pointer",
         }}
       />
