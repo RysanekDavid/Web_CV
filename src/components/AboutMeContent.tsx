@@ -107,14 +107,14 @@ export function AboutMe() {
           sx={{
             color: "#29962c",
 
-            top: { xl: "43vh", lg: "38vh", md: "38vh", sm: "38vh", xs: "34vh" },
+            top: { xl: "42vh", lg: "38vh", md: "38vh", sm: "38vh", xs: "34vh" },
             textAlign: "center",
             fontFamily: "Fira Code",
             display: "block",
             position: "absolute",
             zIndex: 2,
             fontSize: {
-              xl: "6vh",
+              xl: "5vh",
               lg: "5vh",
               md: "4vh",
               sm: "4vh",
@@ -184,7 +184,7 @@ export function AboutMe() {
           marginTop: {
             xl: "56vh",
             lg: "44vh",
-            md: "44vh",
+            md: "40vh",
             sm: "60vh",
             xs: "58vh",
           },
@@ -194,10 +194,10 @@ export function AboutMe() {
           height: { xl: "5.5vh", lg: "5vh", md: "6vh", sm: "8vh", xs: "8vh" },
           zIndex: 2,
           fontSize: {
-            xl: "1vw",
-            lg: "1.2vw",
-            md: "2vw",
-            sm: "3vw",
+            xl: 17,
+            lg: 16,
+            md: 18,
+            sm: 22,
             xs: "3.6vw",
           },
           backgroundColor: "rgba(0, 0, 0, 0)",
