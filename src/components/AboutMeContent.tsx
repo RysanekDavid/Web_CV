@@ -186,7 +186,7 @@ export function AboutMe() {
             lg: "44vh",
             md: "40vh",
             sm: "60vh",
-            xs: "58vh",
+            xs: "50vh",
           },
           border: "3px solid #29962c",
           borderRadius: 6,
