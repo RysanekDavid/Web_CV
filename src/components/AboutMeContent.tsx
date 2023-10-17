@@ -42,7 +42,6 @@ export function AboutMe() {
         display: "flex",
         flexDirection: "column",
         position: "relative",
-
         zIndex: 1,
         maxWidth: "100%",
         minHeight: "90rem",

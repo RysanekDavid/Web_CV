@@ -71,7 +71,13 @@ function ResponsiveTopBar({ selectedTab, onTabChange }: Props) {
                   key={index}
                   label={page}
                   sx={{
-                    minWidth: { xl: 200, lg: 200, md: 200, sm: 180, xs: 125 },
+                    minWidth: {
+                      xl: 200,
+                      lg: 200,
+                      md: 200,
+                      sm: 180,
+                      xs: "28vw",
+                    },
                     backgroundColor:
                       selectedTab === index ? "#121212" : "#1E1E1E",
                     my: 1,
@@ -80,7 +86,7 @@ function ResponsiveTopBar({ selectedTab, onTabChange }: Props) {
                     borderTop: selectedTab === index ? 3 : 0,
                     borderLeft: selectedTab === index ? 3 : 0,
                     borderRight: selectedTab === index ? 3 : 0,
-
+                    display: "flex",
                     borderColor: "#29962c",
                     borderTopLeftRadius: 16,
                     borderTopRightRadius: 16,
@@ -89,7 +95,7 @@ function ResponsiveTopBar({ selectedTab, onTabChange }: Props) {
                       lg: "18px",
                       md: "16px",
                       sm: "16px",
-                      xs: "16px",
+                      xs: "3vw",
                     },
                     fontFamily: "Roboto Slab",
                   }}
