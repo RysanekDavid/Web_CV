@@ -38,13 +38,14 @@ export function AboutMe() {
       sx={{
         alignItems: "center",
         justifyContent: "center",
+        textAlign: "center",
         display: "flex",
         flexDirection: "column",
-        position: "absolute",
-        left: "1%",
+        position: "relative",
+
         zIndex: 1,
-        width: "98%",
-        height: "86%",
+        maxWidth: "100%",
+        minHeight: "90rem",
       }}
     >
       <Box
