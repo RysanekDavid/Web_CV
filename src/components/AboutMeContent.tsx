@@ -44,7 +44,7 @@ export function AboutMe() {
         position: "relative",
         zIndex: 1,
         maxWidth: "100%",
-        minHeight: "90rem",
+        minHeight: "70rem",
       }}
     >
       <Box
@@ -56,10 +56,9 @@ export function AboutMe() {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           width: "100%",
-          height: "100%",
+          height: "88vh",
           zIndex: 0,
           top: 0,
-          marginBottom: { xl: 22, lg: 5, md: 5, sm: 5, xs: 5 },
         }}
       ></Box>
       <Avatar
@@ -86,7 +85,7 @@ export function AboutMe() {
           color: "#EAEAEA",
           fontFamily: "Fira Code",
           fontSize: {
-            xl: "3vh",
+            xl: "1.8vw",
             lg: "3vh",
             md: "2.8vh",
             sm: "3.8vw",
@@ -94,7 +93,7 @@ export function AboutMe() {
           },
           display: "block",
           position: "absolute",
-          top: { xl: "36vh", lg: "30vh", md: "30vh", sm: "30vh", xs: "26vh" },
+          top: { xl: "35vh", lg: "30vh", md: "30vh", sm: "30vh", xs: "26vh" },
           zIndex: 2,
         }}
         variant="h5"
@@ -107,14 +106,14 @@ export function AboutMe() {
           sx={{
             color: "#29962c",
 
-            top: { xl: "42vh", lg: "38vh", md: "38vh", sm: "38vh", xs: "36vh" },
+            top: { xl: "43vh", lg: "38vh", md: "38vh", sm: "38vh", xs: "34vh" },
             textAlign: "center",
             fontFamily: "Fira Code",
             display: "block",
             position: "absolute",
             zIndex: 2,
             fontSize: {
-              xl: "5vh",
+              xl: "2.8vw",
               lg: "5vh",
               md: "4vh",
               sm: "4vh",
@@ -131,7 +130,7 @@ export function AboutMe() {
         sx={{
           color: "#EAEAEA",
           justifyContent: "center",
-          top: { xl: "50vh", lg: "44vh", md: "44vh", sm: "44vh", xs: "50vh" },
+          top: { xl: "53vh", lg: "44vh", md: "44vh", sm: "44vh", xs: "45vh" },
           paddingLeft: {
             xl: "13vw",
             lg: "10vw",
@@ -149,7 +148,7 @@ export function AboutMe() {
 
           fontFamily: "Fira Code",
           fontSize: {
-            xl: "2.5vh",
+            xl: "1.2vw",
             lg: "1.4vw",
             md: "1.9vh",
             sm: "2vh",
@@ -176,20 +175,28 @@ export function AboutMe() {
         }}
         sx={{
           color: "#EAEAEA",
-          marginTop: {
-            xl: "56vh",
-            lg: "44vh",
-            md: "40vh",
-            sm: "60vh",
-            xs: "50vh",
-          },
+          top: { xl: "69vh", lg: "44vh", md: "44vh", sm: "44vh", xs: "114vw" },
+          display: "flex",
+          position: "absolute",
           border: "3px solid #29962c",
           borderRadius: 6,
-          width: { xl: "10vw", lg: "12vw", md: "18vw", sm: "22vw", xs: "30vw" },
-          height: { xl: "5.5vh", lg: "5vh", md: "6vh", sm: "8vh", xs: "8vh" },
+          minWidth: {
+            xl: "10vw",
+            lg: "12vw",
+            md: "18vw",
+            sm: "22vw",
+            xs: "30vw",
+          },
+          minHeight: {
+            xl: "5.5vh",
+            lg: "5vh",
+            md: "6vh",
+            sm: "8vh",
+            xs: "8vh",
+          },
           zIndex: 2,
           fontSize: {
-            xl: 17,
+            xl: "0.8vw",
             lg: 16,
             md: 18,
             sm: 22,
@@ -221,7 +228,7 @@ export function AboutMe() {
           },
           position: "absolute",
           alignItems: "center",
-          marginTop: { xl: "70vh", lg: "56vh", md: "56vh" },
+          top: { xl: "78vh", lg: "56vh", md: "56vh" },
           zIndex: 2,
 
           fontSize: { xl: "2.6vw", lg: "3vw", md: "4vw" },
