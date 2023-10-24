@@ -152,7 +152,7 @@ export function AboutMe() {
             lg: "1.4vw",
             md: "1.9vh",
             sm: "2vh",
-            xs: "3.5vw",
+            xs: "2vh",
           },
           display: "block",
           position: "absolute",
@@ -175,7 +175,7 @@ export function AboutMe() {
         }}
         sx={{
           color: "#EAEAEA",
-          top: { xl: "69vh", lg: "44vh", md: "44vh", sm: "44vh", xs: "114vw" },
+          top: { xl: "69vh", lg: "44vh", md: "44vh", sm: "44vh", xs: "72vh" },
           display: "flex",
           position: "absolute",
           border: "3px solid #29962c",
