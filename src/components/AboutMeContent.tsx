@@ -181,7 +181,7 @@ export function AboutMe() {
             xl: "69vh",
             lg: "64vh",
             md: "68vh",
-            sm: "70vh",
+            sm: "62vh",
             xs: "70vh",
           },
           display: {
@@ -198,7 +198,7 @@ export function AboutMe() {
             xl: "10vw",
             lg: "12vw",
             md: "18vw",
-            sm: "22vw",
+            sm: "20vw",
             xs: "30vw",
           },
           minHeight: {
@@ -213,7 +213,7 @@ export function AboutMe() {
             xl: "0.8vw",
             lg: 16,
             md: 18,
-            sm: 22,
+            sm: "2.6vh",
             xs: "3.6vw",
           },
           backgroundColor: "rgba(0, 0, 0, 0)",
