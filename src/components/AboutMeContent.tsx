@@ -73,7 +73,7 @@ export function AboutMe() {
             sm: "20vh",
             xs: "16vh",
           },
-          top: { xl: "6vh", lg: "6vh", md: "5vh", sm: "6vh", xs: "10vh" },
+          top: { xl: "6vh", lg: "6vh", md: "5vh", sm: "6vh", xs: "8vh" },
           border: "4px solid #29962c",
           position: "absolute",
           zIndex: 2,
@@ -88,12 +88,14 @@ export function AboutMe() {
             xl: "1.8vw",
             lg: "3vh",
             md: "2.8vh",
-            sm: "3.8vw",
-            xs: "5.6vw",
+            sm: "2rem",
+            xs: "1.3rem",
           },
           display: "block",
           position: "absolute",
-          top: { xl: "35vh", lg: "30vh", md: "30vh", sm: "30vh", xs: "32vh" },
+          whiteSpace: "nowrap",
+
+          top: { xl: "35vh", lg: "30vh", md: "30vh", sm: "30vh", xs: "30vh" },
           zIndex: 2,
         }}
         variant="h5"
@@ -106,7 +108,7 @@ export function AboutMe() {
           sx={{
             color: "#29962c",
 
-            top: { xl: "43vh", lg: "38vh", md: "38vh", sm: "38vh", xs: "40vh" },
+            top: { xl: "43vh", lg: "38vh", md: "38vh", sm: "37vh", xs: "38vh" },
             textAlign: "center",
             fontFamily: "Fira Code",
             display: "block",
@@ -116,8 +118,8 @@ export function AboutMe() {
               xl: "2.8vw",
               lg: "5vh",
               md: "4vh",
-              sm: "4vh",
-              xs: "8vw",
+              sm: "2.5rem",
+              xs: "1.9rem",
             },
           }}
           variant="h4"
@@ -130,7 +132,7 @@ export function AboutMe() {
         sx={{
           color: "#EAEAEA",
           justifyContent: "center",
-          top: { xl: "53vh", lg: "44vh", md: "44vh", sm: "44vh", xs: "50vh" },
+          top: { xl: "53vh", lg: "44vh", md: "44vh", sm: "45vh", xs: "48vh" },
           paddingLeft: {
             xl: "13vw",
             lg: "10vw",
@@ -151,7 +153,7 @@ export function AboutMe() {
             xl: "1.2vw",
             lg: "1.4vw",
             md: "1.9vh",
-            sm: "2vh",
+            sm: "1.2rem",
             xs: "0.88rem",
           },
           display: "block",
@@ -179,7 +181,7 @@ export function AboutMe() {
             xl: "69vh",
             lg: "44vh",
             md: "44vh",
-            sm: "44vh",
+            sm: "64vh",
             xs: "70vh",
           },
           display: {
