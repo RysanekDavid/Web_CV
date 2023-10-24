@@ -86,8 +86,8 @@ export function AboutMe() {
           fontFamily: "Fira Code",
           fontSize: {
             xl: "1.8vw",
-            lg: "3vh",
-            md: "2.8vh",
+            lg: "2rem",
+            md: "2.3rem",
             sm: "2rem",
             xs: "1.3rem",
           },
@@ -117,7 +117,7 @@ export function AboutMe() {
             fontSize: {
               xl: "2.8vw",
               lg: "5vh",
-              md: "4vh",
+              md: "3.2rem",
               sm: "2.5rem",
               xs: "1.9rem",
             },
@@ -132,17 +132,17 @@ export function AboutMe() {
         sx={{
           color: "#EAEAEA",
           justifyContent: "center",
-          top: { xl: "53vh", lg: "44vh", md: "44vh", sm: "45vh", xs: "48vh" },
+          top: { xl: "53vh", lg: "47vh", md: "47vh", sm: "45vh", xs: "48vh" },
           paddingLeft: {
             xl: "13vw",
-            lg: "10vw",
+            lg: "7vw",
             md: "7vw",
             sm: "6vw",
             xs: "5vw",
           },
           paddingRight: {
             xl: "13vw",
-            lg: "10vw",
+            lg: "7vw",
             md: "7vw",
             sm: "6vw",
             xs: "5vw",
@@ -151,8 +151,8 @@ export function AboutMe() {
           fontFamily: "Fira Code",
           fontSize: {
             xl: "1.2vw",
-            lg: "1.4vw",
-            md: "1.9vh",
+            lg: "1.39rem",
+            md: "1.3rem",
             sm: "1.2rem",
             xs: "0.88rem",
           },
@@ -179,9 +179,9 @@ export function AboutMe() {
           color: "#EAEAEA",
           top: {
             xl: "69vh",
-            lg: "44vh",
-            md: "44vh",
-            sm: "64vh",
+            lg: "64vh",
+            md: "68vh",
+            sm: "70vh",
             xs: "70vh",
           },
           display: {
@@ -242,7 +242,7 @@ export function AboutMe() {
           },
           position: "absolute",
           alignItems: "center",
-          top: { xl: "78vh", lg: "56vh", md: "56vh" },
+          top: { xl: "78vh", lg: "72vh", md: "76vh" },
           zIndex: 2,
 
           fontSize: { xl: "2.6vw", lg: "3vw", md: "4vw" },
