@@ -73,7 +73,7 @@ export function AboutMe() {
             sm: "20vh",
             xs: "16vh",
           },
-          top: { xl: "6vh", lg: "6vh", md: "5vh", sm: "6vh", xs: "6vh" },
+          top: { xl: "6vh", lg: "6vh", md: "5vh", sm: "6vh", xs: "10vh" },
           border: "4px solid #29962c",
           position: "absolute",
           zIndex: 2,
@@ -93,7 +93,7 @@ export function AboutMe() {
           },
           display: "block",
           position: "absolute",
-          top: { xl: "35vh", lg: "30vh", md: "30vh", sm: "30vh", xs: "26vh" },
+          top: { xl: "35vh", lg: "30vh", md: "30vh", sm: "30vh", xs: "32vh" },
           zIndex: 2,
         }}
         variant="h5"
@@ -106,7 +106,7 @@ export function AboutMe() {
           sx={{
             color: "#29962c",
 
-            top: { xl: "43vh", lg: "38vh", md: "38vh", sm: "38vh", xs: "34vh" },
+            top: { xl: "43vh", lg: "38vh", md: "38vh", sm: "38vh", xs: "40vh" },
             textAlign: "center",
             fontFamily: "Fira Code",
             display: "block",
@@ -130,7 +130,7 @@ export function AboutMe() {
         sx={{
           color: "#EAEAEA",
           justifyContent: "center",
-          top: { xl: "53vh", lg: "44vh", md: "44vh", sm: "44vh", xs: "45vh" },
+          top: { xl: "53vh", lg: "44vh", md: "44vh", sm: "44vh", xs: "50vh" },
           paddingLeft: {
             xl: "13vw",
             lg: "10vw",
@@ -152,7 +152,7 @@ export function AboutMe() {
             lg: "1.4vw",
             md: "1.9vh",
             sm: "2vh",
-            xs: "2vh",
+            xs: "1rem",
           },
           display: "block",
           position: "absolute",
@@ -175,8 +175,20 @@ export function AboutMe() {
         }}
         sx={{
           color: "#EAEAEA",
-          top: { xl: "69vh", lg: "44vh", md: "44vh", sm: "44vh", xs: "72vh" },
-          display: "flex",
+          top: {
+            xl: "69vh",
+            lg: "44vh",
+            md: "44vh",
+            sm: "44vh",
+            xs: "70vh",
+          },
+          display: {
+            xl: "flex",
+            lg: "flex",
+            md: "flex",
+            sm: "flex",
+            xs: "none",
+          },
           position: "absolute",
           border: "3px solid #29962c",
           borderRadius: 6,
