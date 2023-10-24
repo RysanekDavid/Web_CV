@@ -76,7 +76,7 @@ function ResponsiveTopBar({ selectedTab, onTabChange }: Props) {
                       lg: 200,
                       md: 200,
                       sm: 180,
-                      xs: "28vw",
+                      xs: "26vw",
                     },
                     backgroundColor:
                       selectedTab === index ? "#121212" : "#1E1E1E",
