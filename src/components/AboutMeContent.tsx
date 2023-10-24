@@ -88,7 +88,7 @@ export function AboutMe() {
             xl: "1.8vw",
             lg: "2rem",
             md: "2.3rem",
-            sm: "2rem",
+            sm: "2.8vw",
             xs: "1.3rem",
           },
           display: "block",
@@ -118,7 +118,7 @@ export function AboutMe() {
               xl: "2.8vw",
               lg: "5vh",
               md: "3.2rem",
-              sm: "2.5rem",
+              sm: "3.7vw",
               xs: "1.9rem",
             },
           }}
