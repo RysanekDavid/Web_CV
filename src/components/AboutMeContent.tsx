@@ -181,7 +181,7 @@ export function AboutMe() {
             xl: "69vh",
             lg: "64vh",
             md: "68vh",
-            sm: "62vh",
+            sm: "66vh",
             xs: "70vh",
           },
           display: {
