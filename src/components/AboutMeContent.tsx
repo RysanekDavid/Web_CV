@@ -152,7 +152,7 @@ export function AboutMe() {
             lg: "1.4vw",
             md: "1.9vh",
             sm: "2vh",
-            xs: "1rem",
+            xs: "0.88rem",
           },
           display: "block",
           position: "absolute",
