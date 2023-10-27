@@ -1,39 +1,39 @@
-import { Typography, Card, Grid, CardContent } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Unstable_Grid2";
 
-function Resume() {
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: "center",
+  color: theme.palette.text.secondary,
+}));
+
+export default function Resume() {
   return (
-    <Box>
-      <Typography sx={{ color: "#FFFFFF" }} variant="h5">
-        My CV
-      </Typography>
-      <img
-        src={"resumeImage"}
-        alt="Můj životopis"
-        style={{ width: "50%", height: "auto", color: "#FFFFFF" }}
-      />
-    </Box>
-  );
-}
-
-// Projects.tsx
-
-function Projects() {
-  return (
-    <Box>
-      <Typography variant="h5">Moje Projekty</Typography>
-      <Grid container spacing={2}>
-        <Grid item xs={12} sm={6} md={4}>
-          <Card>
-            <CardContent>
-              <Typography variant="h6">Název projektu</Typography>
-              <Typography variant="body2">Popis projektu...</Typography>
-            </CardContent>
-          </Card>
+    <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={2} sx={{ backgroundColor: "black" }}>
+        <Grid xs={8} sx={{ color: "white" }}>
+          <Item>Thick Bracket</Item>
+        </Grid>
+        <Grid xs={4}>
+          <Item>Thin Bracket</Item>
+        </Grid>
+        <Grid xs={4}>
+          <Item>Second Thin</Item>
+        </Grid>
+        <Grid xs={8}>
+          <Item>Second Thick</Item>
+        </Grid>
+        <Grid xs={4}>
+          <Item>Second Thin</Item>
+        </Grid>
+        <Grid xs={8}>
+          <Item>Second Thick</Item>
         </Grid>
       </Grid>
     </Box>
   );
 }
-
-export { Resume, Projects };

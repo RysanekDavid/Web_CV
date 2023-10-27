@@ -178,7 +178,7 @@ export function AboutMe() {
         sx={{
           color: "#EAEAEA",
           top: {
-            xl: "69vh",
+            xl: "67vh",
             lg: "64vh",
             md: "68vh",
             sm: "66vh",
@@ -242,9 +242,8 @@ export function AboutMe() {
           },
           position: "absolute",
           alignItems: "center",
-          top: { xl: "78vh", lg: "72vh", md: "76vh" },
+          top: { xl: "75vh", lg: "72vh", md: "76vh" },
           zIndex: 2,
-
           fontSize: { xl: "2.6vw", lg: "3vw", md: "4vw" },
           cursor: "pointer",
         }}
