@@ -3,7 +3,7 @@ import "./App.css";
 import TopBar from "./components/TopBar";
 import BottomBar from "./components/BottomBar";
 import { AboutMe } from "./components/AboutMeContent";
-import Resume from "./components/ResumeContent";
+import Resume from "./components/Resume/ResumeContent";
 import Projects from "./components/ProjectContent";
 
 function App() {

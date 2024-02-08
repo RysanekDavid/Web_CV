@@ -17,7 +17,6 @@ export function AboutMe() {
   const [professionIndex, setProfessionIndex] = useState(0);
   const [growVisible, setGrowVisible] = useState(true);
   const theme = useTheme();
-
   const isSmallScreenOrDown = useMediaQuery(theme.breakpoints.down("md"));
 
   useEffect(() => {
