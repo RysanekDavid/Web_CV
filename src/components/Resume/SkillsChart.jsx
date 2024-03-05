@@ -10,27 +10,38 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import CodeIcon from "@mui/icons-material/Code";
+import JavascriptIcon from "@mui/icons-material/Javascript";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPython } from "@fortawesome/free-brands-svg-icons";
+
+const PythonIcon = () => <FontAwesomeIcon icon={faPython} />;
 
 const data = [
   {
     name: "Typescript",
     value: 90,
+    icon: <PythonIcon />,
   },
   {
     name: "Javascript",
     value: 100,
+    icon: <CodeIcon />,
   },
   {
     name: "Python",
     value: 60,
+    icon: <CodeIcon />,
   },
   {
     name: "AI",
     value: 80,
+    icon: <CodeIcon />,
   },
   {
     name: "React",
     value: 100,
+    icon: <CodeIcon />,
   },
 ];
 
@@ -49,14 +60,25 @@ const CustomTooltip = ({ active, payload, label }) => {
         }}
       >
         <p className="desc">{`${label}`}</p>
-        <p className="desc">
-          {`Percentage: ${(payload[0].value / 100) * 100}%`}
-        </p>
+        <p className="desc">{`Mastery: ${(payload[0].value / 100) * 100}%`}</p>
       </div>
     );
   }
 
   return null;
+};
+
+const CustomYAxisTick = ({ payload, x, y }) => {
+  const IconToRender = payload.value.icon;
+
+  return (
+    <g transform={`translate(${x},${y - 10})`}>
+      {IconToRender}
+      <text x={30} y={0} dy={6} textAnchor="start" fill="#666">
+        {payload.value.name}
+      </text>
+    </g>
+  );
 };
 
 export default function SkillsChart() {
@@ -72,8 +94,9 @@ export default function SkillsChart() {
         }}
       >
         <XAxis type="number" />
-        <YAxis type="category" dataKey="name" />
+        <YAxis dataKey="name" type="category" tick={<CustomYAxisTick />} />
         <Tooltip cursor={false} content={CustomTooltip} />
+
         <Bar dataKey="value" fill="#032206" barSize={28} />
       </BarChart>
     </ResponsiveContainer>

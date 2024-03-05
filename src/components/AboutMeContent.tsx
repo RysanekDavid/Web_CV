@@ -33,56 +33,58 @@ export function AboutMe() {
   }, [professionIndex, professions]);
 
   return (
-    <Box
-      sx={{
-        alignItems: "center",
-        justifyContent: "center",
-        textAlign: "center",
-        display: "flex",
-        flexDirection: "column",
-        position: "relative",
-        zIndex: 1,
-        maxWidth: "100%",
-        minHeight: "70rem",
-      }}
-    >
+    <>
       <Box
         className="BgImg"
         sx={{
           backgroundImage: `url(${BackgroundImg})`,
-          position: "absolute",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          width: "100%",
-          height: "88vh",
+          minWidth: "100%",
+          position: "absolute",
+          minHeight: "88vh",
           zIndex: 0,
-          top: 0,
         }}
       ></Box>
-      <Avatar
-        src={AvatarImage}
-        alt="David Ryšánek photo"
+
+      <Box
         sx={{
-          width: { xl: "25vh", lg: "20vh", md: "20vh", sm: "20vh", xs: "16vh" },
-          height: {
-            xl: "25vh",
-            lg: "20vh",
-            md: "20vh",
-            sm: "20vh",
-            xs: "16vh",
-          },
-          top: { xl: "6vh", lg: "6vh", md: "5vh", sm: "6vh", xs: "8vh" },
-          border: "4px solid #29962c",
-          position: "absolute",
+          display: "flex",
+          justifyContent: "center",
           zIndex: 2,
+          pt: 4,
+          pb: 4,
         }}
-      />
+      >
+        <Avatar
+          src={AvatarImage}
+          alt="David Ryšánek photo"
+          sx={{
+            minWidth: {
+              xl: "25vh",
+              lg: "20vh",
+              md: "20vh",
+              sm: "20vh",
+              xs: "16vh",
+            },
+            minHeight: {
+              xl: "25vh",
+              lg: "20vh",
+              md: "20vh",
+              sm: "20vh",
+              xs: "16vh",
+            },
+            border: "4px solid #29962c",
+          }}
+        />
+      </Box>
 
       <Typography
         sx={{
           color: "#EAEAEA",
           fontFamily: "Fira Code",
+          textAlign: "center",
           fontSize: {
             xl: "1.8vw",
             lg: "2rem",
@@ -91,7 +93,7 @@ export function AboutMe() {
             xs: "1.3rem",
           },
           display: "block",
-          position: "absolute",
+
           whiteSpace: "nowrap",
 
           top: { xl: "35vh", lg: "30vh", md: "30vh", sm: "30vh", xs: "30vh" },
@@ -111,7 +113,6 @@ export function AboutMe() {
             textAlign: "center",
             fontFamily: "Fira Code",
             display: "block",
-            position: "absolute",
             zIndex: 2,
             fontSize: {
               xl: "2.8vw",
@@ -156,7 +157,7 @@ export function AboutMe() {
             xs: "0.88rem",
           },
           display: "block",
-          position: "absolute",
+
           textAlign: "center",
           zIndex: 2,
         }}
@@ -176,21 +177,7 @@ export function AboutMe() {
         }}
         sx={{
           color: "#EAEAEA",
-          top: {
-            xl: "67vh",
-            lg: "64vh",
-            md: "68vh",
-            sm: "66vh",
-            xs: "70vh",
-          },
-          display: {
-            xl: "flex",
-            lg: "flex",
-            md: "flex",
-            sm: "flex",
-            xs: "none",
-          },
-          position: "absolute",
+          display: "flex",
           border: "3px solid #29962c",
           borderRadius: 6,
           minWidth: {
@@ -239,7 +226,7 @@ export function AboutMe() {
             sm: "none",
             xs: "none",
           },
-          position: "absolute",
+
           alignItems: "center",
           top: { xl: "75vh", lg: "72vh", md: "76vh" },
           zIndex: 2,
@@ -247,6 +234,6 @@ export function AboutMe() {
           cursor: "pointer",
         }}
       />
-    </Box>
+    </>
   );
 }
