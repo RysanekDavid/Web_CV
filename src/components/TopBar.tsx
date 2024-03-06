@@ -73,7 +73,7 @@ function ResponsiveTopBar({ selectedTab, onTabChange }: Props) {
                       lg: "1.5vw",
                       md: "2vw",
                       sm: "2.5vw",
-                      xs: "3vw",
+                      xs: "3.2vw",
                     },
                   }}
                 />
