@@ -42,7 +42,13 @@ export function AboutMe() {
           backgroundRepeat: "no-repeat",
           minWidth: "100%",
           position: "absolute",
-          minHeight: "88vh",
+          minHeight: {
+            xl: "88vh",
+            lg: "88vh",
+            md: "88vh",
+            sm: "88vh",
+            xs: "92vh",
+          },
           zIndex: 0,
         }}
       ></Box>
@@ -174,6 +180,7 @@ export function AboutMe() {
           sx={{
             color: "#EAEAEA",
             display: "flex",
+            mt: 4,
             border: "3px solid #29962c",
             borderRadius: 6,
             minWidth: {

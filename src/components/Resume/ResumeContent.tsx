@@ -29,25 +29,23 @@ export default function Resume() {
       <Box sx={{ flexGrow: 1 }}>
         <Typography
           sx={{
-            fontSize: "2.5rem",
             color: "rgba(255, 255, 255, 0.71)",
             textShadow: "0px 1px 10px rgba(255, 255, 255, 0.6)",
             fontWeight: "bold",
             fontFamily: "Roboto",
             fontStyle: "oblique",
-            borderBottom: 5,
+            borderBottom: 4,
             borderRadius: "4px",
+            display: "flex",
+            pt: 7,
             borderColor: "rgba(255, 255, 255, 0.6)",
-            ml: "10rem",
-            mb: "2rem",
-            maxWidth: "fit-content",
           }}
           variant="h5"
         >
           Resume
         </Typography>
       </Box>
-      <Box sx={{ flexGrow: 1 }}>
+      <Box sx={{ flexGrow: 1, pt: 4 }}>
         <Grid container spacing={8} sx={{ justifyContent: "center" }}>
           <Grid item xs={12} sm={6} md={4} lg={5}>
             <Item>
