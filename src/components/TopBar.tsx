@@ -1,13 +1,9 @@
-//import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Container from "@mui/material/Container";
-// import Button from "@mui/material/Button";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-
-// import { createTheme } from "@mui/system";
 
 const pages = ["About Me", "Resume", "Projects"];
 
@@ -22,11 +18,8 @@ function ResponsiveTopBar({ selectedTab, onTabChange }: Props) {
       sx={{
         backgroundColor: "#121212",
         borderBottom: 3,
-        borderTop: 3,
         borderBottomColor: "#29962c",
         borderTopColor: "#000000",
-
-        position: "sticky",
       }}
     >
       <Container maxWidth="xl">
@@ -34,22 +27,13 @@ function ResponsiveTopBar({ selectedTab, onTabChange }: Props) {
           <Box
             sx={{
               flexGrow: 1,
-
-              display: {
-                xs: "flex",
-                sm: "flex",
-                md: "flex",
-                lg: "flex",
-                xl: "flex",
-              },
-              position: "relative",
-
+              display: "flex",
               justifyContent: {
-                xs: "center",
-                sm: "center",
-                md: "center",
-                lg: "left",
                 xl: "left",
+                lg: "left",
+                md: "left",
+                sm: "center",
+                xs: "center",
               },
             }}
           >
@@ -58,10 +42,9 @@ function ResponsiveTopBar({ selectedTab, onTabChange }: Props) {
               onChange={(_, newValue) => onTabChange(newValue)}
               centered={true}
               textColor="inherit"
-              indicatorColor="primary"
               sx={{
                 "& .MuiTabs-indicator": {
-                  height: 8,
+                  minHeight: 6,
                   backgroundColor: "#46b363",
                 },
               }}
@@ -71,33 +54,27 @@ function ResponsiveTopBar({ selectedTab, onTabChange }: Props) {
                   key={index}
                   label={page}
                   sx={{
-                    minWidth: {
-                      xl: 200,
-                      lg: 200,
-                      md: 200,
-                      sm: 180,
-                      xs: "25vw",
-                    },
                     backgroundColor:
                       selectedTab === index ? "#121212" : "#1E1E1E",
-                    my: 1,
-                    mx: { xl: 0.3, lg: 0.3, md: 0.3, sm: 0.3, xs: 0.2 },
+                    my: 0.5,
+                    mx: { xl: 0.3, lg: 0.3, md: 0.3, sm: 0.3, xs: 0.1 },
+
                     whiteSpace: "nowrap",
                     borderTop: selectedTab === index ? 3 : 0,
-                    borderLeft: selectedTab === index ? 3 : 0,
-                    borderRight: selectedTab === index ? 3 : 0,
+                    borderLeft: selectedTab === index ? 1 : 0,
+                    borderRight: selectedTab === index ? 1 : 0,
                     display: "flex",
                     borderColor: "#29962c",
                     borderTopLeftRadius: 16,
                     borderTopRightRadius: 16,
+                    fontFamily: "Roboto Slab",
                     fontSize: {
-                      xl: "20px",
-                      lg: "18px",
-                      md: "16px",
-                      sm: "16px",
+                      xl: "1vw",
+                      lg: "1.5vw",
+                      md: "2vw",
+                      sm: "2.5vw",
                       xs: "3vw",
                     },
-                    fontFamily: "Roboto Slab",
                   }}
                 />
               ))}

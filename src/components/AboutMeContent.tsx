@@ -8,7 +8,6 @@ import AvatarImage from "../assets/A6.jpg";
 import ArrowDropDownCircleOutlinedIcon from "@mui/icons-material/ArrowDropDownCircleOutlined";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
-
 //import { Fade } from "react-awesome-reveal";
 
 export function AboutMe() {
@@ -53,7 +52,7 @@ export function AboutMe() {
           display: "flex",
           justifyContent: "center",
           zIndex: 2,
-          pt: 4,
+          pt: 12,
           pb: 4,
         }}
       >
@@ -85,16 +84,7 @@ export function AboutMe() {
           color: "#EAEAEA",
           fontFamily: "Fira Code",
           textAlign: "center",
-          fontSize: {
-            xl: "1.8vw",
-            lg: "2rem",
-            md: "2.3rem",
-            sm: "2.8vw",
-            xs: "1.3rem",
-          },
           display: "block",
-
-          whiteSpace: "nowrap",
 
           top: { xl: "35vh", lg: "30vh", md: "30vh", sm: "30vh", xs: "30vh" },
           zIndex: 2,
@@ -169,71 +159,77 @@ export function AboutMe() {
         translates into captivating visuals that effectively convey messages.
       </Typography>
 
-      <Button
-        onClick={() => {
-          document
-            .getElementById("About_Me")
-            ?.scrollIntoView({ behavior: "smooth" });
-        }}
+      <Box
         sx={{
-          color: "#EAEAEA",
           display: "flex",
-          border: "3px solid #29962c",
-          borderRadius: 6,
-          minWidth: {
-            xl: "10vw",
-            lg: "12vw",
-            md: "18vw",
-            sm: "20vw",
-            xs: "30vw",
-          },
-          minHeight: {
-            xl: "5.5vh",
-            lg: "5vh",
-            md: "6vh",
-            sm: "8vh",
-            xs: "8vh",
-          },
-          zIndex: 2,
-          fontSize: {
-            xl: "0.8vw",
-            lg: 16,
-            md: 18,
-            sm: "3vh",
-            xs: "3.6vw",
-          },
-          backgroundColor: "rgba(0, 0, 0, 0)",
-          fontFamily: "Fira Code",
-          "&:hover": {
-            backgroundColor: "rgba(46, 42, 40, 0.8)",
-          },
+          justifyContent: "center",
         }}
       >
-        {isSmallScreenOrDown ? "Resume" : "Show Resume"}
-      </Button>
-      <ArrowDropDownCircleOutlinedIcon
-        onClick={() => {
-          document
-            .getElementById("About_Me")
-            ?.scrollIntoView({ behavior: "smooth" });
-        }}
-        sx={{
-          color: "#29962c",
-          display: {
-            xl: "flex",
-            lg: "flex",
-            md: "flex",
-            sm: "none",
-            xs: "none",
-          },
+        <Button
+          onClick={() => {
+            document
+              .getElementById("About_Me")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
+          sx={{
+            color: "#EAEAEA",
+            display: "flex",
+            border: "3px solid #29962c",
+            borderRadius: 6,
+            minWidth: {
+              xl: "10vw",
+              lg: "12vw",
+              md: "18vw",
+              sm: "20vw",
+              xs: "30vw",
+            },
+            minHeight: {
+              xl: "5.5vh",
+              lg: "5vh",
+              md: "6vh",
+              sm: "8vh",
+              xs: "8vh",
+            },
+            zIndex: 2,
+            fontSize: {
+              xl: "0.8vw",
+              lg: 16,
+              md: 18,
+              sm: "3vh",
+              xs: "3.6vw",
+            },
+            backgroundColor: "rgba(0, 0, 0, 0)",
+            fontFamily: "Fira Code",
+            "&:hover": {
+              backgroundColor: "rgba(46, 42, 40, 0.8)",
+            },
+          }}
+        >
+          {isSmallScreenOrDown ? "Resume" : "Show Resume"}
+        </Button>
+        <ArrowDropDownCircleOutlinedIcon
+          onClick={() => {
+            document
+              .getElementById("About_Me")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
+          sx={{
+            color: "#29962c",
+            display: {
+              xl: "flex",
+              lg: "flex",
+              md: "flex",
+              sm: "none",
+              xs: "none",
+            },
 
-          alignItems: "center",
-          top: { xl: "75vh", lg: "72vh", md: "76vh" },
-          zIndex: 2,
-          fontSize: { xl: "2.6vw", lg: "3vw", md: "4vw" },
-          cursor: "pointer",
-        }}
-      />
+            top: { xl: "75vh", lg: "72vh", md: "76vh" },
+            zIndex: 2,
+            fontSize: { xl: "2.6vw", lg: "3vw", md: "4vw" },
+            cursor: "pointer",
+          }}
+        />
+      </Box>
     </>
   );
 }
