@@ -42,13 +42,7 @@ export function AboutMe() {
           backgroundRepeat: "no-repeat",
           minWidth: "100%",
           position: "absolute",
-          minHeight: {
-            xl: "88vh",
-            lg: "88vh",
-            md: "88vh",
-            sm: "88vh",
-            xs: "92vh",
-          },
+          minHeight: "100%",
           zIndex: 0,
         }}
       ></Box>
@@ -91,8 +85,6 @@ export function AboutMe() {
           fontFamily: "Fira Code",
           textAlign: "center",
           display: "block",
-
-          top: { xl: "35vh", lg: "30vh", md: "30vh", sm: "30vh", xs: "30vh" },
           zIndex: 2,
         }}
         variant="h5"
