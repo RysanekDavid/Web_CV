@@ -1,5 +1,5 @@
 import { Typography, Avatar } from "@mui/material";
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Grow from "@mui/material/Grow";
 import Button from "@mui/material/Button";
@@ -10,9 +10,14 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 //import { Fade } from "react-awesome-reveal";
 
-export function AboutMe() {
-  const [currentProfession, setCurrentProfession] = useState("Developer");
-  const professions = useMemo(() => ["Developer", "Designer", "Analyst"], []);
+const professions = ["Developer", "Designer", "Analyst"]
+
+type Props = {
+  visible: boolean;
+  
+};
+
+export function AboutMe({visible}:Props) {
   const [professionIndex, setProfessionIndex] = useState(0);
   const [growVisible, setGrowVisible] = useState(true);
   const theme = useTheme();
@@ -23,13 +28,16 @@ export function AboutMe() {
       setGrowVisible(false);
       setTimeout(() => {
         setProfessionIndex((prevIndex) => (prevIndex + 1) % professions.length);
-        setCurrentProfession(professions[professionIndex]);
         setGrowVisible(true);
       }, 500);
     }, 3400);
 
     return () => clearInterval(interval);
-  }, [professionIndex, professions]);
+  }, [professionIndex]);
+
+if (!visible){
+
+  return null;}
 
   return (
     <>
@@ -120,7 +128,7 @@ export function AboutMe() {
           }}
           variant="h4"
         >
-          {currentProfession}
+          {professions[professionIndex]}
         </Typography>
       </Grow>
 
@@ -240,3 +248,4 @@ export function AboutMe() {
     </>
   );
 }
+

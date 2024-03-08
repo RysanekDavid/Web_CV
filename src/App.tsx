@@ -14,9 +14,9 @@ function App() {
       <TopBar selectedTab={selectedTab} onTabChange={setSelectedTab} />
       <BottomBar />
       <div className="content">
-        <AboutMe />
-        <Resume />
-        <Projects />
+        {selectedTab === 0 && <AboutMe visible={selectedTab === 0} /> }
+        {selectedTab === 1 && <Resume /> }
+        {selectedTab === 2 && <Projects /> }
       </div>
     </div>
   );
