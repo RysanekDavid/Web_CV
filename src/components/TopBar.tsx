@@ -11,7 +11,6 @@ type Props = {
   selectedTab: number;
   onTabChange: (index: number) => void;
 };
-
 function ResponsiveTopBar({ selectedTab, onTabChange }: Props) {
   return (
     <AppBar
