@@ -1,18 +1,23 @@
 import { Typography, Avatar } from "@mui/material";
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Grow from "@mui/material/Grow";
 import Button from "@mui/material/Button";
 import BackgroundImg from "../assets/BgAM.jpg";
 import AvatarImage from "../assets/A6.jpg";
-import ArrowDropDownCircleOutlinedIcon from "@mui/icons-material/ArrowDropDownCircleOutlined";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+import buttonStyle from "../styles/AboutMePage/ButtonStyle";
 //import { Fade } from "react-awesome-reveal";
 
-export function AboutMe() {
-  const [currentProfession, setCurrentProfession] = useState("Developer");
-  const professions = useMemo(() => ["Developer", "Designer", "Analyst"], []);
+const professions = ["Developer", "Designer", "Analyst"]
+
+type Props = {
+  visible: boolean;
+  
+};
+
+export function AboutMe({visible}:Props) {
   const [professionIndex, setProfessionIndex] = useState(0);
   const [growVisible, setGrowVisible] = useState(true);
   const theme = useTheme();
@@ -23,13 +28,16 @@ export function AboutMe() {
       setGrowVisible(false);
       setTimeout(() => {
         setProfessionIndex((prevIndex) => (prevIndex + 1) % professions.length);
-        setCurrentProfession(professions[professionIndex]);
         setGrowVisible(true);
       }, 500);
     }, 3400);
 
     return () => clearInterval(interval);
-  }, [professionIndex, professions]);
+  }, [professionIndex]);
+
+if (!visible){
+
+  return null;}
 
   return (
     <>
@@ -112,7 +120,7 @@ export function AboutMe() {
           }}
           variant="h4"
         >
-          {currentProfession}
+          {professions[professionIndex]}
         </Typography>
       </Grow>
 
@@ -169,66 +177,27 @@ export function AboutMe() {
               .getElementById("About_Me")
               ?.scrollIntoView({ behavior: "smooth" });
           }}
-          sx={{
-            color: "#EAEAEA",
-            display: "flex",
-            mt: 4,
-            border: "3px solid #29962c",
-            borderRadius: 6,
-            minWidth: {
-              xl: "10vw",
-              lg: "12vw",
-              md: "18vw",
-              sm: "20vw",
-              xs: "30vw",
-            },
-            minHeight: {
-              xl: "5.5vh",
-              lg: "5vh",
-              md: "6vh",
-              sm: "8vh",
-              xs: "8vh",
-            },
-            zIndex: 2,
-            fontSize: {
-              xl: "0.8vw",
-              lg: 16,
-              md: 18,
-              sm: "3vh",
-              xs: "3.6vw",
-            },
-            backgroundColor: "rgba(0, 0, 0, 0)",
-            fontFamily: "Fira Code",
-            "&:hover": {
-              backgroundColor: "rgba(46, 42, 40, 0.8)",
-            },
-          }}
+          sx={buttonStyle}
         >
           {isSmallScreenOrDown ? "Resume" : "Show Resume"}
         </Button>
-        <ArrowDropDownCircleOutlinedIcon
-          onClick={() => {
-            document
-              .getElementById("About_Me")
-              ?.scrollIntoView({ behavior: "smooth" });
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Button
+          onClick={(selectedTab) => {
+           selectedTab ? "1":"1"
           }}
-          sx={{
-            color: "#29962c",
-            display: {
-              xl: "flex",
-              lg: "flex",
-              md: "flex",
-              sm: "none",
-              xs: "none",
-            },
-
-            top: { xl: "75vh", lg: "72vh", md: "76vh" },
-            zIndex: 2,
-            fontSize: { xl: "2.6vw", lg: "3vw", md: "4vw" },
-            cursor: "pointer",
-          }}
-        />
+          sx={buttonStyle}
+        >
+          {isSmallScreenOrDown ? "Projects" : "Show Projects"}
+        </Button>
       </Box>
     </>
   );
 }
+
