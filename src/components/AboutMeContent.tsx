@@ -8,16 +8,21 @@ import AvatarImage from "../assets/A6.jpg";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import buttonStyle from "../styles/AboutMePage/ButtonStyle";
+import descriptionStyle from "../styles/AboutMePage/DescriptionStyle";
+import avatarStyle from "../styles/AboutMePage/AvatarStyle";
+import {
+  greetStyle,
+  professionStyle,
+} from "../styles/AboutMePage/GreetAndProfessionStyle";
 //import { Fade } from "react-awesome-reveal";
 
-const professions = ["Developer", "Designer", "Analyst"]
+const professions = ["Developer", "Designer", "Analyst"];
 
 type Props = {
   visible: boolean;
-  
 };
 
-export function AboutMe({visible}:Props) {
+export function AboutMe({ visible }: Props) {
   const [professionIndex, setProfessionIndex] = useState(0);
   const [growVisible, setGrowVisible] = useState(true);
   const theme = useTheme();
@@ -35,9 +40,9 @@ export function AboutMe({visible}:Props) {
     return () => clearInterval(interval);
   }, [professionIndex]);
 
-if (!visible){
-
-  return null;}
+  if (!visible) {
+    return null;
+  }
 
   return (
     <>
@@ -51,6 +56,13 @@ if (!visible){
           minWidth: "100%",
           position: "absolute",
           minHeight: "100%",
+          minHeight: {
+            xl: "95%",
+            lg: "95%",
+            md: "95%",
+            sm: "95%",
+            xs: "95%",
+          },
           zIndex: 0,
         }}
       ></Box>
@@ -64,101 +76,20 @@ if (!visible){
           pb: 4,
         }}
       >
-        <Avatar
-          src={AvatarImage}
-          alt="David Ryšánek photo"
-          sx={{
-            minWidth: {
-              xl: "25vh",
-              lg: "20vh",
-              md: "20vh",
-              sm: "20vh",
-              xs: "16vh",
-            },
-            minHeight: {
-              xl: "25vh",
-              lg: "20vh",
-              md: "20vh",
-              sm: "20vh",
-              xs: "16vh",
-            },
-            border: "4px solid #29962c",
-          }}
-        />
+        <Avatar src={AvatarImage} alt="David Ryšánek photo" sx={avatarStyle} />
       </Box>
 
-      <Typography
-        sx={{
-          color: "#EAEAEA",
-          fontFamily: "Fira Code",
-          textAlign: "center",
-          display: "block",
-          zIndex: 2,
-        }}
-        variant="h5"
-      >
+      <Typography sx={greetStyle} variant="h5">
         Hello I'm David Ryšánek
       </Typography>
 
       <Grow in={growVisible} timeout={700}>
-        <Typography
-          sx={{
-            color: "#29962c",
-
-            top: { xl: "43vh", lg: "38vh", md: "38vh", sm: "37vh", xs: "38vh" },
-            textAlign: "center",
-            fontFamily: "Fira Code",
-            display: "block",
-            zIndex: 2,
-            fontSize: {
-              xl: "2.8vw",
-              lg: "5vh",
-              md: "3.2rem",
-              sm: "3.7vw",
-              xs: "1.9rem",
-            },
-          }}
-          variant="h4"
-        >
+        <Typography sx={professionStyle} variant="h4">
           {professions[professionIndex]}
         </Typography>
       </Grow>
 
-      <Typography
-        sx={{
-          color: "#EAEAEA",
-          justifyContent: "center",
-          top: { xl: "53vh", lg: "47vh", md: "47vh", sm: "45vh", xs: "48vh" },
-          paddingLeft: {
-            xl: "13vw",
-            lg: "7vw",
-            md: "7vw",
-            sm: "4vw",
-            xs: "5vw",
-          },
-          paddingRight: {
-            xl: "13vw",
-            lg: "7vw",
-            md: "7vw",
-            sm: "4vw",
-            xs: "5vw",
-          },
-
-          fontFamily: "Fira Code",
-          fontSize: {
-            xl: "1.2vw",
-            lg: "1.39rem",
-            md: "1.3rem",
-            sm: "2vw",
-            xs: "0.88rem",
-          },
-          display: "block",
-
-          textAlign: "center",
-          zIndex: 2,
-        }}
-        variant="h5"
-      >
+      <Typography sx={descriptionStyle} variant="h5">
         In over 2 years in the digital field, I've mastered web development and
         graphic design. I create websites that are not only visually appealing
         but also user-focused and functional. My passion for graphic design
@@ -190,7 +121,7 @@ if (!visible){
       >
         <Button
           onClick={(selectedTab) => {
-           selectedTab ? "1":"1"
+            selectedTab ? "1" : "1";
           }}
           sx={buttonStyle}
         >
@@ -200,4 +131,3 @@ if (!visible){
     </>
   );
 }
-
