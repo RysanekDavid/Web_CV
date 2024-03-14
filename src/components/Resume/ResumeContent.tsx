@@ -1,6 +1,6 @@
 import { Box, Grid } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import SkillsChart from "./SkillsChart";
+import SimpleChart from "./SkillsChart";
 import {
   ProfesionalExperienceText,
   ProfesionalExperienceTextPadding,
@@ -48,36 +48,55 @@ export default function Resume() {
               </Typography>
             </ItemStyle>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={5}>
+          <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <ItemStyle>
               <CardTitle>Education</CardTitle>
-              <Box sx={{ display: "flex", alignItems: "center" }}>
-                <img
-                  src={HighSchoolIcon}
-                  alt="High school"
-                  style={iconsStyles}
-                />
-                <Typography sx={{ pl: "1rem" }}>My highSchool</Typography>
-              </Box>
+
               <Box sx={{ display: "flex", alignItems: "center" }}>
                 <img
                   src={UniversityIcon}
                   alt="University"
                   style={iconsStyles}
                 />
-                <Typography sx={{ pl: "1rem" }}>My university</Typography>
+                <Typography
+                  sx={{
+                    ...regularText,
+                    pl: "1rem",
+                    fontStyle: "italic",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Unicorn University - Software development - Bachelor's degree
+                </Typography>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", pt: "2rem" }}>
+                <img
+                  src={HighSchoolIcon}
+                  alt="High school"
+                  style={iconsStyles}
+                />
+                <Typography
+                  sx={{
+                    ...regularText,
+                    pl: "1rem",
+                    fontStyle: "italic",
+                    fontWeight: "bold",
+                  }}
+                >
+                  TEGA - Electronics and Automatisation{" "}
+                </Typography>
               </Box>
             </ItemStyle>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={5}>
+          <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <ItemStyle>
               <CardTitle>Contact Information</CardTitle>
             </ItemStyle>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={5}>
+          <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <ItemStyle>
               <CardTitle>Skills</CardTitle>
-              <SkillsChart />
+              <SimpleChart />
             </ItemStyle>
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={5}>
