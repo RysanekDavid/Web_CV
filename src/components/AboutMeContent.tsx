@@ -55,13 +55,12 @@ export function AboutMe({ visible }: Props) {
           backgroundRepeat: "no-repeat",
           minWidth: "100%",
           position: "absolute",
-          minHeight: "100%",
           minHeight: {
             xl: "95%",
             lg: "95%",
             md: "95%",
             sm: "95%",
-            xs: "95%",
+            xs: "120%",
           },
           zIndex: 0,
         }}
@@ -120,8 +119,8 @@ export function AboutMe({ visible }: Props) {
         }}
       >
         <Button
-          onClick={(selectedTab) => {
-            selectedTab ? "1" : "1";
+          onClick={() => {
+            
           }}
           sx={buttonStyle}
         >
