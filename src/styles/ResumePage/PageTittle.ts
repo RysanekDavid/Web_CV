@@ -1,5 +1,5 @@
 const pageTittle = {
-  color: "rgba(255, 255, 255, 1)",
+  color: "rgba(0, 140, 0, 1)",
   fontWeight: "bold",
   fontFamily: "Roboto",
   justifyContent: "center",

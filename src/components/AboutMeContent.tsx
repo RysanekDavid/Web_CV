@@ -53,7 +53,7 @@ export function AboutMe({ visible }: Props) {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          minWidth: "100%",
+          minWidth: "99%",
           position: "absolute",
           minHeight: {
             xl: "95%",
@@ -118,12 +118,7 @@ export function AboutMe({ visible }: Props) {
           justifyContent: "center",
         }}
       >
-        <Button
-          onClick={() => {
-            
-          }}
-          sx={buttonStyle}
-        >
+        <Button onClick={() => {}} sx={buttonStyle}>
           {isSmallScreenOrDown ? "Projects" : "Show Projects"}
         </Button>
       </Box>

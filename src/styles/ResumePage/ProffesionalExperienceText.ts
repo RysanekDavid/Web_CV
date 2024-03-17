@@ -1,5 +1,5 @@
 export const ProfesionalExperienceText = {
-  color: "rgba(255, 255, 255, 1)",
+  color: "rgba(255, 255, 255, 0.90)",
   fontFamily: "Roboto",
   fontWeight: "bold",
   fontStyle: "oblique",
@@ -13,7 +13,7 @@ export const ProfesionalExperienceText = {
 };
 
 export const ProfesionalExperienceTextPadding = {
-  color: "rgba(255, 255, 255, 1)",
+  color: "rgba(255, 255, 255, 0.90)",
   fontFamily: "Roboto",
   fontWeight: "bold",
   fontStyle: "oblique",
