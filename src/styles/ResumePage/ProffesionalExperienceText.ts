@@ -8,7 +8,7 @@ export const ProfesionalExperienceText = {
     lg: "1.5rem",
     md: "1.4rem",
     sm: "1.3rem",
-    xs: "1.2rem",
+    xs: "0.9rem",
   },
 };
 
@@ -22,7 +22,7 @@ export const ProfesionalExperienceTextPadding = {
     lg: "1.5rem",
     md: "1.4rem",
     sm: "1.3rem",
-    xs: "1.2rem",
+    xs: "0.9rem",
   },
   pt: "1rem",
 };

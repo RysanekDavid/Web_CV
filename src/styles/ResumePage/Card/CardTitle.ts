@@ -11,3 +11,14 @@ const Title = styled("h2")({
 });
 
 export default Title;
+
+export const TimelineTitle = styled("h2")({
+  fontSize: "1.4rem",
+  textShadow: "0px 1px 3px rgba(0, 0, 0, 0.8)",
+  color: "rgba(17, 150, 25, 0.9)",
+  fontFamily: "Roboto",
+  fontWeight: "bold",
+  textDecoration: "underline",
+  paddingLeft: "1.5rem",
+  textDecorationColor: "rgba(17, 130, 25, 1)",
+});

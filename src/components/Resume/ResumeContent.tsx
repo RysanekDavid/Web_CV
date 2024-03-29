@@ -13,6 +13,10 @@ import ItemStyle from "../../styles/ResumePage/Card/ItemStyle";
 import UniversityIcon from "../../assets/ResumeIcons/university_icon.svg";
 import HighSchoolIcon from "../../assets/ResumeIcons/high_school_icon.svg";
 import iconsStyles from "../../styles/ResumePage/Card/IconsStyle";
+import BasicTable from "./SkillsTable";
+import BasicTimeline from "./Timeline";
+import { TimelineCardStyle } from "../../styles/ResumePage/Card/ItemStyle";
+import { TimelineTitle } from "../../styles/ResumePage/Card/CardTitle";
 
 export default function Resume() {
   return (
@@ -23,8 +27,8 @@ export default function Resume() {
       <Box sx={{ flexGrow: 1, pt: 3, pr: "1rem", pl: "1rem" }}>
         <Grid container spacing={4} sx={{ justifyContent: "center" }}>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-            <ItemStyle>
-              <CardTitle>Professional Experience</CardTitle>
+            <TimelineCardStyle>
+              <TimelineTitle>Professional Experience</TimelineTitle>
               <Typography sx={ProfesionalExperienceText}>
                 Software Developer - Czech Post 2022 - present
               </Typography>
@@ -47,7 +51,7 @@ export default function Resume() {
               <Typography sx={regularText}>
                 Smart home wiring, complete review and solution design.
               </Typography>
-            </ItemStyle>
+            </TimelineCardStyle>
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <ItemStyle>
@@ -111,9 +115,21 @@ export default function Resume() {
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <ItemStyle>
-              <CardTitle>Contact Information</CardTitle>
+              <CardTitle>Certifications & Skills</CardTitle>
+              <Typography sx={regularText}>
+                React framework - web development. applications International
+                Corporate TrainingInternational Corporate Training Released
+                October 2023
+              </Typography>
+              <Typography sx={regularText}>
+                Programming in TypeScript GOPAS Computer School Released
+                September 2023
+              </Typography>
+
+              <BasicTable></BasicTable>
             </ItemStyle>
           </Grid>
+
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <ItemStyle>
               <CardTitle sx={{ textAlign: "left" }}>
@@ -123,15 +139,17 @@ export default function Resume() {
                     verticalAlign: "middle",
                   }}
                 />
-                Skills
+                Programming languages
               </CardTitle>
               <SimpleChart />
             </ItemStyle>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={5}>
-            <ItemStyle>
-              <CardTitle>Certifications & Languages</CardTitle>
-            </ItemStyle>
+
+          <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+            <TimelineCardStyle>
+              <TimelineTitle>Hobbies</TimelineTitle>
+              <BasicTimeline></BasicTimeline>
+            </TimelineCardStyle>
           </Grid>
         </Grid>
       </Box>

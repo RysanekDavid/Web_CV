@@ -7,9 +7,9 @@ export default function SimpleChart() {
         {
           id: "barCategories",
           scaleType: "band",
-          data: ["Typescript", "Javascript", "Python", "AI", "React"],
+          data: ["HTML & CSS", "Javascript", "Python", "AI", "Java"],
+          // @ts-ignore
           categoryGapRatio: 0.5,
-
           tickLabelStyle: {
             fill: "rgba(0, 225, 2, 0.8)",
             fontSize: 13,
@@ -17,11 +17,11 @@ export default function SimpleChart() {
         },
       ]}
       layout="horizontal"
-      margin={{ top: 10, right: 40, bottom: 45, left: 75 }}
+      margin={{ top: 10, right: 40, bottom: 45, left: 90 }}
       series={[
         {
           color: "rgba(0, 220, 0, 0.35)",
-          data: [95, 95, 80, 85, 90],
+          data: [95, 95, 88, 85, 80],
         },
       ]}
       height={310}
