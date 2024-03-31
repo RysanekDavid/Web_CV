@@ -12,6 +12,7 @@ import TimelineDatetime from "../../styles/ResumePage/Card/TimelineDatetime";
 import { Typography } from "@mui/material";
 import { TimelineText } from "../../styles/ResumePage/Card/TimelineText";
 import LaptopMacIcon from "@mui/icons-material/LaptopMac";
+import EngineeringIcon from "@mui/icons-material/Engineering";
 //import CodeIcon from "@mui/icons-material/Code";
 //import BuildIcon from "@mui/icons-material/Build";
 
@@ -54,7 +55,9 @@ export default function BasicTimeline() {
           2020 - present
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot />
+          <TimelineDot>
+            <LaptopMacIcon color="primary" />
+          </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={ProfesionalExperienceText}>
@@ -70,7 +73,9 @@ export default function BasicTimeline() {
           2021 - 2022
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot />
+          <TimelineDot>
+            <EngineeringIcon />
+          </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={ProfesionalExperienceText}>
