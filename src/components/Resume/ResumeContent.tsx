@@ -10,6 +10,7 @@ import BasicTimeline from "./Timeline";
 import { TimelineCardStyle } from "../../styles/ResumePage/Card/ItemStyle";
 import { TimelineTitle } from "../../styles/ResumePage/Card/CardTitle";
 import EducationTimeline from "./EducationTimeline";
+import CustomizedTable from "./TableContent";
 
 export default function Resume() {
   return (
@@ -17,7 +18,7 @@ export default function Resume() {
       <Box
         sx={{ flexGrow: 1, pt: { xl: 8, lg: 7, md: 7, sm: 7, xs: 7 } }}
       ></Box>
-      <Box sx={{ flexGrow: 1, pt: 3, pr: "1rem", pl: "1rem" }}>
+      <Box sx={{ flexGrow: 1, pt: "1rem", pr: "1rem", pl: "1rem", pb: "6rem" }}>
         <Grid container spacing={4} sx={{ justifyContent: "center" }}>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <TimelineCardStyle>
@@ -65,9 +66,10 @@ export default function Resume() {
           </Grid>
 
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-            <TimelineCardStyle>
+            <ItemStyle>
               <TimelineTitle>Hobbies</TimelineTitle>
-            </TimelineCardStyle>
+              <CustomizedTable />
+            </ItemStyle>
           </Grid>
         </Grid>
       </Box>
