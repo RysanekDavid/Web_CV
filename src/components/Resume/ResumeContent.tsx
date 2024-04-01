@@ -2,21 +2,14 @@ import { Box, Grid } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import SimpleChart from "./SimpleChart";
 import CodeIcon from "@mui/icons-material/Code";
-import {
-  ProfesionalExperienceText,
-  ProfesionalExperienceTextPadding,
-} from "../../styles/ResumePage/ProffesionalExperienceText";
-//import pageTittle from "../../styles/ResumePage/PageTittle";
-import regularText, { regularTitle } from "../../styles/ResumePage/RegularText";
+import regularText from "../../styles/ResumePage/RegularText";
 import CardTitle from "../../styles/ResumePage/Card/CardTitle";
 import ItemStyle from "../../styles/ResumePage/Card/ItemStyle";
-import UniversityIcon from "../../assets/ResumeIcons/university_icon.svg";
-import HighSchoolIcon from "../../assets/ResumeIcons/high_school_icon.svg";
-import iconsStyles from "../../styles/ResumePage/Card/IconsStyle";
 import BasicTable from "./SkillsTable";
 import BasicTimeline from "./Timeline";
 import { TimelineCardStyle } from "../../styles/ResumePage/Card/ItemStyle";
 import { TimelineTitle } from "../../styles/ResumePage/Card/CardTitle";
+import EducationTimeline from "./EducationTimeline";
 
 export default function Resume() {
   return (
@@ -29,88 +22,14 @@ export default function Resume() {
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <TimelineCardStyle>
               <TimelineTitle>Professional Experience</TimelineTitle>
-              <Typography sx={ProfesionalExperienceText}>
-                Software Developer - Czech Post 2022 - present
-              </Typography>
-              <Typography sx={regularText}>
-                Producing clean, efficient code based on specifications.
-                Testing, Deploying and Fixing and improving existing software
-                and testing and deploying.
-              </Typography>
-              <Typography sx={ProfesionalExperienceTextPadding}>
-                Freelance developer - 2020 - present
-              </Typography>
-              <Typography sx={regularText}>
-                Writing applications, AI systems, scripts and other things
-                related to software engineering based on customer needs and
-                requirements.
-              </Typography>
-              <Typography sx={ProfesionalExperienceTextPadding}>
-                Electrotechnician - SDS company - 2021 - 2022
-              </Typography>
-              <Typography sx={regularText}>
-                Smart home wiring, complete review and solution design.
-              </Typography>
+              <BasicTimeline></BasicTimeline>
             </TimelineCardStyle>
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <ItemStyle>
               <CardTitle>Education</CardTitle>
 
-              <Box sx={{ display: "flex", alignItems: "center" }}>
-                <img
-                  src={UniversityIcon}
-                  alt="University"
-                  style={iconsStyles}
-                />
-                <Typography
-                  sx={{
-                    ...regularTitle,
-                    pl: "1rem",
-                    fontStyle: "italic",
-                    fontWeight: "bold",
-                  }}
-                >
-                  Unicorn University - Software development - Bachelor's degree
-                </Typography>
-              </Box>
-              <Typography
-                sx={{
-                  ...regularText,
-                  pl: "3.5rem",
-                  fontStyle: "italic",
-                }}
-              >
-                Focus on robotics and automation systems with the basics of
-                programming
-              </Typography>
-              <Box sx={{ display: "flex", alignItems: "center", pt: "2rem" }}>
-                <img
-                  src={HighSchoolIcon}
-                  alt="High school"
-                  style={iconsStyles}
-                />
-                <Typography
-                  sx={{
-                    ...regularTitle,
-                    pl: "1rem",
-                    fontStyle: "italic",
-                    fontWeight: "bold",
-                  }}
-                >
-                  TEGA - Electronics and Automatisation
-                </Typography>
-              </Box>
-              <Typography
-                sx={{
-                  ...regularText,
-                  pl: "3.5rem",
-                  fontStyle: "italic",
-                }}
-              >
-                Focus on robotics and automation systems with the basics of
-                programming
-              </Typography>
+              <EducationTimeline></EducationTimeline>
             </ItemStyle>
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
@@ -148,7 +67,6 @@ export default function Resume() {
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <TimelineCardStyle>
               <TimelineTitle>Hobbies</TimelineTitle>
-              <BasicTimeline></BasicTimeline>
             </TimelineCardStyle>
           </Grid>
         </Grid>

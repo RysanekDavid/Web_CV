@@ -6,11 +6,10 @@ const TimelineDatetime = {
     sm: "1.2rem",
     xs: "0.8rem",
   },
-  color: "rgba(19,130,19, 1)",
+  pt: 2,
+  color: "#858C85",
   fontFamily: "Roboto",
-
-  //whitespace: "nowrap",
   //fontWeight: "bold",
-  //fontStyle: "oblique",
+  fontStyle: "oblique",
 };
 export default TimelineDatetime;

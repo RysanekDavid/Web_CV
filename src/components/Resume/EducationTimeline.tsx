@@ -11,12 +11,10 @@ import { ProfesionalExperienceText } from "../../styles/ResumePage/ProffesionalE
 import TimelineDatetime from "../../styles/ResumePage/Card/TimelineDatetime";
 import { Typography } from "@mui/material";
 import { TimelineText } from "../../styles/ResumePage/Card/TimelineText";
-import LaptopMacIcon from "@mui/icons-material/LaptopMac";
-import EngineeringIcon from "@mui/icons-material/Engineering";
-//import CodeIcon from "@mui/icons-material/Code";
-//import BuildIcon from "@mui/icons-material/Build";
+import SchoolIcon from "@mui/icons-material/School";
+import BusinessIcon from "@mui/icons-material/Business";
 
-export default function BasicTimeline() {
+export default function EducationTimeline() {
   return (
     <Timeline
       sx={{
@@ -37,51 +35,31 @@ export default function BasicTimeline() {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot>
-            <LaptopMacIcon sx={{ color: "#1A1B1A" }} />
+            <SchoolIcon sx={{ color: "#1A1B1A" }} />
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={ProfesionalExperienceText}>
-          Software Developer - Czech Post
+          Unicorn University
           <Typography sx={TimelineText}>
-            Producing clean, efficient code based on specifications. Testing,
-            Deploying and Fixing and improving existing software and testing and
-            deploying.
+            Software development - Bachelor's degree
           </Typography>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent sx={TimelineDatetime}>
-          2020 - present
+          2015 - 2019
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot>
-            <LaptopMacIcon sx={{ color: "#1A1B1A" }} />
+            <BusinessIcon sx={{ color: "#1A1B1A" }} />
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={ProfesionalExperienceText}>
-          Freelance developer
+          TEGA
           <Typography sx={TimelineText}>
-            Writing applications, AI systems, scripts and other things related
-            to software engineering based on customer needs and requirements.
-          </Typography>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineOppositeContent sx={TimelineDatetime}>
-          2021 - 2022
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot>
-            <EngineeringIcon sx={{ color: "#1A1B1A" }} />
-          </TimelineDot>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent sx={ProfesionalExperienceText}>
-          Electrotechnician - SDS
-          <Typography sx={TimelineText}>
-            Smart home wiring, complete review and solution design.
+            Electronics and Automatisation systems
           </Typography>
         </TimelineContent>
       </TimelineItem>
