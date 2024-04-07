@@ -3,7 +3,7 @@ import "./App.css";
 import TopBar from "./components/TopBar";
 import BottomBar from "./components/BottomBar";
 import { AboutMe } from "./components/AboutMeContent";
-import Resume from "./components/Resume/ResumeContent";
+import Resume from "./pages/ResumeContent";
 import Projects from "./components/ProjectContent";
 
 function App() {
@@ -14,9 +14,9 @@ function App() {
       <TopBar selectedTab={selectedTab} onTabChange={setSelectedTab} />
       <BottomBar />
       <div className="content">
-        {selectedTab === 0 && <AboutMe visible={selectedTab === 0} /> }
-        {selectedTab === 1 && <Resume /> }
-        {selectedTab === 2 && <Projects /> }
+        {selectedTab === 0 && <AboutMe visible={selectedTab === 0} />}
+        {selectedTab === 1 && <Resume />}
+        {selectedTab === 2 && <Projects />}
       </div>
     </div>
   );

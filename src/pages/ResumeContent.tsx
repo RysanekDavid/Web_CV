@@ -1,16 +1,15 @@
 import { Box, Grid } from "@mui/material";
-import Typography from "@mui/material/Typography";
-import SimpleChart from "./SimpleChart";
+import SimpleChart from "../components/Resume/SimpleChart";
 import CodeIcon from "@mui/icons-material/Code";
-import regularText from "../../styles/ResumePage/RegularText";
-import CardTitle from "../../styles/ResumePage/Card/CardTitle";
-import ItemStyle from "../../styles/ResumePage/Card/ItemStyle";
-import BasicTable from "./SkillsTable";
-import BasicTimeline from "./Timeline";
-import { TimelineCardStyle } from "../../styles/ResumePage/Card/ItemStyle";
-import { TimelineTitle } from "../../styles/ResumePage/Card/CardTitle";
-import EducationTimeline from "./EducationTimeline";
-import CustomizedTable from "./TableContent";
+import CardTitle from "../styles/ResumePage/Card/CardTitle";
+import ItemStyle from "../styles/ResumePage/Card/ItemStyle";
+import CertificationSkills from "../components/Resume/CertificationSkills";
+import BasicTimeline from "../components/Resume/Timeline";
+import { TimelineCardStyle } from "../styles/ResumePage/Card/ItemStyle";
+import { TimelineTitle } from "../styles/ResumePage/Card/CardTitle";
+import EducationTimeline from "../components/Resume/EducationTimeline";
+//import CustomizedTable from "./TableContent";
+import HobbiesAndAdditionalInfo from "../components/Resume/HobbiesInfo";
 
 export default function Resume() {
   return (
@@ -36,17 +35,7 @@ export default function Resume() {
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <ItemStyle>
               <CardTitle>Certifications & Skills</CardTitle>
-              <Typography sx={regularText}>
-                React framework - web development. applications International
-                Corporate TrainingInternational Corporate Training Released
-                October 2023
-              </Typography>
-              <Typography sx={regularText}>
-                Programming in TypeScript GOPAS Computer School Released
-                September 2023
-              </Typography>
-
-              <BasicTable></BasicTable>
+              <CertificationSkills></CertificationSkills>
             </ItemStyle>
           </Grid>
 
@@ -67,8 +56,8 @@ export default function Resume() {
 
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <ItemStyle>
-              <TimelineTitle>Hobbies</TimelineTitle>
-              <CustomizedTable />
+              <TimelineTitle>Hobbies & additional information</TimelineTitle>
+              <HobbiesAndAdditionalInfo></HobbiesAndAdditionalInfo>
             </ItemStyle>
           </Grid>
         </Grid>
