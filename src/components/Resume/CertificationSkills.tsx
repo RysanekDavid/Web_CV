@@ -81,8 +81,6 @@ export default function CertificationSkills() {
           </Tooltip>
         ))}
       </Box>
-
-      {/* Languages section */}
       <Typography
         sx={{ fontWeight: "bold", pt: "1rem", pb: "0.5rem" }}
         variant="h5"

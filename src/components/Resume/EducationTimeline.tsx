@@ -26,6 +26,7 @@ export default function EducationTimeline() {
             sm: 0.4,
             xs: 0.4,
           },
+          pl: "0rem",
         },
       }}
     >

@@ -9,6 +9,11 @@ import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import TheatersIcon from "@mui/icons-material/Theaters";
 import LocalAirportIcon from "@mui/icons-material/LocalAirport";
 import Grid from "@mui/material/Grid";
+import BackHandIcon from "@mui/icons-material/BackHand";
+import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
+import GroupsIcon from "@mui/icons-material/Groups";
+import ForumIcon from "@mui/icons-material/Forum";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
 
 const hobbies = [
   { name: "Sport", icon: <SportsMartialArtsIcon /> },
@@ -19,7 +24,11 @@ const hobbies = [
 ];
 
 const additionalInfo = [
-  { name: "Reliability", icon: <SportsMartialArtsIcon /> },
+  { name: "Reliability", icon: <BackHandIcon /> },
+  { name: "Diligence", icon: <ThumbUpAltIcon /> },
+  { name: "Teamwork", icon: <GroupsIcon /> },
+  { name: "Communication", icon: <ForumIcon /> },
+  { name: "Time flexible", icon: <AccessTimeIcon /> },
 ];
 
 export default function HobbiesAndAdditionalInfo() {
@@ -27,10 +36,10 @@ export default function HobbiesAndAdditionalInfo() {
     <Box
       sx={{
         padding: "16px",
-        bgcolor: "rgba(0, 0, 0, 0.6)",
+        bgcolor: "rgba(0, 0, 0, 0.5)",
         color: "white",
         borderRadius: "12px",
-        boxShadow: "0 0 8px 10px rgba(0, 0, 0, 0.74)",
+        boxShadow: "0 0 6px 12px rgba(20, 20, 20, 1)",
         display: "flex",
         mr: "0.6rem",
         mt: "1.5rem",

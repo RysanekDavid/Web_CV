@@ -1,10 +1,10 @@
 import * as React from "react";
 import "./App.css";
-import TopBar from "./components/TopBar";
-import BottomBar from "./components/BottomBar";
-import { AboutMe } from "./components/AboutMeContent";
+import TopBar from "./components/General/TopBar";
+import BottomBar from "./components/General/BottomBar";
+import { AboutMe } from "./pages/AboutMeContent";
 import Resume from "./pages/ResumeContent";
-import Projects from "./components/ProjectContent";
+import Projects from "./pages/ProjectContent";
 
 function App() {
   const [selectedTab, setSelectedTab] = React.useState(0);
