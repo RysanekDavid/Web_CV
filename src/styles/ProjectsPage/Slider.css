@@ -1,0 +1,12 @@
+/* swiper-custom.css */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #29962c !important; /* Set your desired color */
+}
+
+/* If the arrows are background images, you might need to change the background-image property instead */
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  background-image: url("path-to-your-custom-arrow-image");
+  color: transparent; /* Remove the color if using an image */
+}
