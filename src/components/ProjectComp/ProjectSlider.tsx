@@ -5,6 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination, Navigation } from "swiper/modules";
 import { SliderData } from "../../constants/SliderData";
 import { Card, CardContent, CardMedia, Typography, Box } from "@mui/material";
+import "../../styles/ProjectsPage/Slider.css";
+import LaunchIcon from "@mui/icons-material/Launch";
 
 const ProjectSlider = () => {
   return (
@@ -23,7 +25,6 @@ const ProjectSlider = () => {
         slidesPerView={1}
         spaceBetween={10}
         freeMode
-        navigation
         pagination={{ clickable: true }}
         modules={[FreeMode, Pagination, Navigation]}
         breakpoints={{
@@ -43,12 +44,12 @@ const ProjectSlider = () => {
                 cursor: "pointer",
                 my: "4rem",
                 mx: "3rem",
-
+                backgroundColor: "rgba(77, 82, 77, 0.4)",
                 p: "16px",
 
-                transition: "transform 0.3s ease, border-color 0.3s ease",
+                transition: "transform 0.6s ease, border-color 0.6s ease",
                 "&:hover": {
-                  transform: "scale(1.03)", // Adjusted scale factor for a more noticeable effect
+                  transform: "scale(1.05)", // Adjusted scale factor for a more noticeable effect
                   zIndex: 1, // Ensures card is above others on scale
                   "&::after": {
                     content: '""',
@@ -64,30 +65,55 @@ const ProjectSlider = () => {
                 },
               }}
             >
-              <CardMedia
-                component="img"
-                image={project.backgroundImage}
-                alt={project.title}
-                sx={{
-                  height: {
-                    xs: "200px",
-                    sm: "250px",
-                    md: "300px",
-                    lg: "350px",
-                    xl: "450px",
-                  },
-                  zIndex: 0,
-                  maxWidth: "100%",
-                  objectFit: "cover",
-                  borderTopLeftRadius: "12px",
-                  borderTopRightRadius: "12px",
-                }}
-              />
+              <Box sx={{ position: "relative" }}>
+                <CardMedia
+                  component="img"
+                  image={project.backgroundImage}
+                  alt={project.title}
+                  sx={{
+                    maxHeight: {
+                      xs: "200px",
+                      sm: "250px",
+                      md: "300px",
+                      lg: "350px",
+                      xl: "450px",
+                    },
+                    zIndex: 0,
+                    maxWidth: "100%",
+                    objectFit: "cover",
+                    borderRadius: "10px",
+                  }}
+                />
+
+                <Box
+                  sx={{
+                    position: "absolute",
+                    bottom: 16,
+                    left: 16,
+                    display: "flex",
+
+                    backgroundColor: "rgba(0, 0, 0, 0.4)",
+                    borderRadius: "50%",
+                  }}
+                >
+                  <LaunchIcon sx={{ color: "white", fontSize: "3.2rem" }} />
+                </Box>
+              </Box>
+
               <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography
+                  sx={{ color: "white" }}
+                  gutterBottom
+                  variant="h5"
+                  component="div"
+                >
                   {project.title}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography
+                  sx={{ color: "white" }}
+                  variant="body2"
+                  color="text.secondary"
+                >
                   {project.content}
                 </Typography>
               </CardContent>
