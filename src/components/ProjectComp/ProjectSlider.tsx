@@ -15,7 +15,6 @@ const ProjectSlider = () => {
         textAlign: "center",
         display: "flex",
         justifyContent: "center",
-
         overflow: "hidden",
         ml: "1rem",
         mr: "1rem",
@@ -46,11 +45,10 @@ const ProjectSlider = () => {
                 mx: "3rem",
                 backgroundColor: "rgba(77, 82, 77, 0.4)",
                 p: "16px",
-
                 transition: "transform 0.6s ease, border-color 0.6s ease",
                 "&:hover": {
-                  transform: "scale(1.05)", // Adjusted scale factor for a more noticeable effect
-                  zIndex: 1, // Ensures card is above others on scale
+                  transform: "scale(1.05)",
+                  zIndex: 1,
                   "&::after": {
                     content: '""',
                     position: "absolute",
@@ -71,19 +69,22 @@ const ProjectSlider = () => {
                   image={project.backgroundImage}
                   alt={project.title}
                   sx={{
-                    maxHeight: {
-                      xs: "200px",
-                      sm: "250px",
-                      md: "300px",
-                      lg: "350px",
-                      xl: "450px",
-                    },
+                    maxHeight: "450px",
                     zIndex: 0,
                     maxWidth: "100%",
                     objectFit: "cover",
                     borderRadius: "10px",
                   }}
                 />
+                
+                <Box sx={{
+                  position: "absolute",
+                  top: 16,
+                  left: 16,
+                  zIndex: 2, 
+                }}>
+                  <project.icon sx={{ fontSize: "3rem", color: "rgba(27,102,157,1)" }} />
+                </Box>
 
                 <Box
                   sx={{
@@ -91,7 +92,6 @@ const ProjectSlider = () => {
                     bottom: 16,
                     left: 16,
                     display: "flex",
-
                     backgroundColor: "rgba(0, 0, 0, 0.4)",
                     borderRadius: "50%",
                   }}

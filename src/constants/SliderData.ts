@@ -1,55 +1,45 @@
-import {
-  RxCrop,
-  RxDesktop,
-  RxPencil2,
-  RxReader,
-  RxRocket,
-  RxAccessibility,
-} from "react-icons/rx";
+import SmartToyIcon from '@mui/icons-material/SmartToy';
+import CloudIcon from '@mui/icons-material/Cloud';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+import TaskIcon from '@mui/icons-material/Task';
+import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 
-import SpaceCity1 from "../assets/ProjectImages/FarmBot.jpeg";
-import SpaceCity5 from "../assets/ProjectImages/FarmBot.jpeg";
-import SpaceCity6 from "../assets/ProjectImages/FarmBot.jpeg";
-import SpaceCity7 from "../assets/ProjectImages/FarmBot.jpeg";
-import SpaceCity8 from "../assets/ProjectImages/FarmBot.jpeg";
-import SpaceCity9 from "../assets/ProjectImages/FarmBot.jpeg";
+import FarmBot from "../assets/ProjectImages/FarmBot.jpeg";
+import MeteoApp from "../assets/ProjectImages/MeteoApp.png";
+import ShoppingList from "../assets/ProjectImages/ShoppingList.png";
+import TaskManager from "../assets/ProjectImages/TaskManager.png";
+import VideoLibrary from "../assets/ProjectImages/VideoLibrary.png";
 
 export const SliderData = [
   {
-    icon: RxCrop,
-    title: "Development",
-    content: "Lorem ipsum dolor sit /amet, consectetur adipiscing elit.",
-    backgroundImage: SpaceCity9,
+    icon: SmartToyIcon,
+    title: "GameDev FarmBot",
+    content: "Application for automation of finding and destroing stones for loot in MMORPG. Built using using Python and OpenCV library.",
+    backgroundImage: FarmBot,
   },
 
   {
-    icon: RxPencil2,
-    title: "Branding",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    backgroundImage: SpaceCity1,
+    icon: CloudIcon,
+    title: "Meteo App",
+    content: "Meteo App is a solution for managing weather stations measuring temperature. Built using Typescript+React and IoT Device",
+    backgroundImage: MeteoApp,
   },
   {
-    icon: RxDesktop,
-    title: "Design",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    backgroundImage: SpaceCity6,
+    icon: ShoppingBasketIcon,
+    title: "ShoppingList App",
+    content: "App for creating and sharing shopping lists for multiple people. Built using Typescript+React, ExpressJS, MongoDB",
+    backgroundImage: ShoppingList,
   },
   {
-    icon: RxReader,
-    title: "Seo",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    backgroundImage: SpaceCity7,
+    icon: TaskIcon,
+    title: "TaskManagerPRO",
+    content: "Tool for recording errors and problems in software development or project management. Built using Typescript+React, ExpressJS, MongoDB",
+    backgroundImage: TaskManager,
   },
   {
-    icon: RxAccessibility,
-    title: "Management",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    backgroundImage: SpaceCity5,
-  },
-  {
-    icon: RxRocket,
-    title: "Production",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    backgroundImage: SpaceCity8,
+    icon: VideoLibraryIcon,
+    title: "VideoLibrary App",
+    content: "Server for sharing video files. Build using TypeScript+React, NodeJS, SQL",
+    backgroundImage: VideoLibrary,
   },
 ];
