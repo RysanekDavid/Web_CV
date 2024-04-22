@@ -42,13 +42,14 @@ const ProjectSlider = () => {
                 borderRadius: "20px",
                 border: "3px solid rgba(41,150,44, 0.94)",
                 cursor: "pointer",
-                my: {
-                  xl: "4rem",
-                  lg: "4rem",
-                  md: "4rem",
-                  sm: "4rem",
-                  xs: "1.8rem",
+                mb: {
+                  xl: "3rem",
+                  lg: "3rem",
+                  md: "3rem",
+                  sm: "3rem",
+                  xs: "2rem",
                 },
+                mt: "4rem",
                 mx: "1rem",
                 backgroundColor: "rgba(77, 82, 77, 0.4)",
                 p: "12px",
@@ -76,7 +77,13 @@ const ProjectSlider = () => {
                   image={project.backgroundImage}
                   alt={project.title}
                   sx={{
-                    maxHeight: "450px",
+                    maxHeight: {
+                      xl: "420px",
+                      lg: "420px",
+                      md: "420px",
+                      sm: "420px",
+                      xs: "380px",
+                    },
                     zIndex: 0,
                     maxWidth: "100%",
                     objectFit: "cover",
