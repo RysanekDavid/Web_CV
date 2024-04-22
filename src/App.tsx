@@ -10,12 +10,23 @@ import { useSwipeable } from "react-swipeable";
 function App() {
   const [selectedTab, setSelectedTab] = React.useState(0);
 
+  const handleTabChange = (newTab: number, e: any) => {
+    const target = e.target as HTMLElement;
+    const isSwiperSlide = target.closest(".swiper-slide") !== null;
+    if (!isSwiperSlide) {
+      setSelectedTab(newTab);
+    }
+  };
   const swipeHandlers = useSwipeable({
-    onSwipedLeft: () => setSelectedTab((prev) => (prev < 2 ? prev + 1 : prev)),
-    onSwipedRight: () => setSelectedTab((prev) => (prev > 0 ? prev - 1 : prev)),
-    trackMouse: false, // Pouze pro touch zařízení
+    onSwipedLeft: () =>
+      handleTabChange(
+        selectedTab + 1 < 3 ? selectedTab + 1 : selectedTab,
+        event
+      ),
+    onSwipedRight: () =>
+      handleTabChange(selectedTab > 0 ? selectedTab - 1 : selectedTab, event),
+    trackMouse: false,
   });
-
   return (
     <div className="App" {...swipeHandlers}>
       <TopBar selectedTab={selectedTab} onTabChange={setSelectedTab} />

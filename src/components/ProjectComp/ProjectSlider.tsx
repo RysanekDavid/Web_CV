@@ -47,7 +47,7 @@ const ProjectSlider = () => {
                   lg: "3rem",
                   md: "3rem",
                   sm: "3rem",
-                  xs: "1.8rem",
+                  xs: "1.6rem",
                 },
                 mt: "1rem",
                 mx: "1rem",
