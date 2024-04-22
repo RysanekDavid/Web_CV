@@ -1,31 +1,13 @@
 const buttonStyle = {
   color: "#EAEAEA",
-  display: "flex",
-  mt: 4,
+  marginTop: 4,
+  marginBottom: 2, // For spacing between buttons
   border: "3px solid #29962c",
   borderRadius: 6,
-  minWidth: {
-    xl: "10vw",
-    lg: "12vw",
-    md: "18vw",
-    sm: "20vw",
-    xs: "30vw",
-  },
-  minHeight: {
-    xl: "5.5vh",
-    lg: "5vh",
-    md: "6vh",
-    sm: "8vh",
-    xs: "8vh",
-  },
-  zIndex: 0,
-  fontSize: {
-    xl: "0.8vw",
-    lg: 16,
-    md: 18,
-    sm: "3vh",
-    xs: "3.6vw",
-  },
+  minWidth: { lg: "20%", sm: "30%", xs: "30%" },
+  minHeight: "48px",
+  zIndex: 1,
+  fontSize: { sm: "2.2vh", xs: "3.6vw" }, // Adjust font size for small and extra-small screens
   backgroundColor: "rgba(0, 0, 0, 0)",
   fontFamily: "Fira Code",
   "&:hover": {

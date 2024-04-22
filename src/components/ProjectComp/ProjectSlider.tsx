@@ -47,7 +47,7 @@ const ProjectSlider = () => {
                   lg: "3rem",
                   md: "3rem",
                   sm: "3rem",
-                  xs: "1.5rem",
+                  xs: "1.8rem",
                 },
                 mt: {
                   xl: "4rem",
@@ -88,7 +88,7 @@ const ProjectSlider = () => {
                       lg: "420px",
                       md: "420px",
                       sm: "420px",
-                      xs: "340px",
+                      xs: "280px",
                     },
                     zIndex: 0,
                     maxWidth: "100%",

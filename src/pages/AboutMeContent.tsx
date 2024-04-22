@@ -53,15 +53,11 @@ export function AboutMe({ visible }: Props) {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          minWidth: "99%",
+          minWidth: "100vw",
           position: "absolute",
-          minHeight: {
-            xl: "95%",
-            lg: "95%",
-            md: "95%",
-            sm: "95%",
-            xs: "120%",
-          },
+          minHeight: "100%",
+          top: 0,
+          left: 0,
           zIndex: 0,
         }}
       ></Box>
@@ -98,7 +94,11 @@ export function AboutMe({ visible }: Props) {
       <Box
         sx={{
           display: "flex",
+          flexDirection: { xs: "row", sm: "column" },
+          alignItems: "center",
           justifyContent: "center",
+          mb: { xl: 16, lg: 10, md: 8, sm: 10, xs: 20 },
+          zIndex: 2,
         }}
       >
         <Button
@@ -107,18 +107,14 @@ export function AboutMe({ visible }: Props) {
               .getElementById("About_Me")
               ?.scrollIntoView({ behavior: "smooth" });
           }}
-          sx={buttonStyle}
+          sx={{ ...buttonStyle, mr: { sm: 0, xs: 1 } }}
         >
           {isSmallScreenOrDown ? "Resume" : "Show Resume"}
         </Button>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <Button onClick={() => {}} sx={buttonStyle}>
+        <Button
+          onClick={() => {}}
+          sx={{ ...buttonStyle, ml: { sm: 0, xs: 1 } }}
+        >
           {isSmallScreenOrDown ? "Projects" : "Show Projects"}
         </Button>
       </Box>
