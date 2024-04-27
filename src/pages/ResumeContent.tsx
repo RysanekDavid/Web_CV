@@ -1,4 +1,4 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import SimpleChart from "../components/Resume/SimpleChart";
 import CodeIcon from "@mui/icons-material/Code";
 import CardTitle from "../styles/ResumePage/Card/CardTitle";
@@ -8,17 +8,49 @@ import BasicTimeline from "../components/Resume/Timeline";
 import { TimelineCardStyle } from "../styles/ResumePage/Card/ItemStyle";
 import { TimelineTitle } from "../styles/ResumePage/Card/CardTitle";
 import EducationTimeline from "../components/Resume/EducationTimeline";
-//import CustomizedTable from "./TableContent";
+
 import HobbiesAndAdditionalInfo from "../components/Resume/HobbiesInfo";
 
 export default function Resume() {
   return (
-    <>
+    <div id="resume-section">
       <Box
-        sx={{ flexGrow: 1, pt: { xl: 8, lg: 7, md: 7, sm: 7, xs: 7 } }}
-      ></Box>
-      <Box sx={{ flexGrow: 1, pt: "1rem", pr: "1rem", pl: "1rem", pb: "6rem" }}>
-        <Grid container spacing={4} sx={{ justifyContent: "center" }}>
+        sx={{
+          flexGrow: 1,
+          pt: {
+            xl: "6.5rem",
+            lg: "4rem",
+            md: "4rem",
+            sm: "11rem",
+            xs: "7rem",
+          },
+          pr: "1rem",
+          pl: "1rem",
+          pb: "6rem",
+        }}
+      >
+        <Typography
+          sx={{
+            fontWeight: "bold",
+            fontFamily: "Roboto",
+            fontStyle: "italic",
+            background:
+              "-webkit-linear-gradient(85deg, #29962c 40%, #5c6d5c 55%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            textAlign: "center",
+
+            zIndex: 1,
+          }}
+          variant="h3"
+        >
+          Resume
+        </Typography>
+        <Grid
+          container
+          spacing={4}
+          sx={{ justifyContent: "center", mt: "1rem" }}
+        >
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <TimelineCardStyle>
               <TimelineTitle>Professional Experience</TimelineTitle>
@@ -62,6 +94,6 @@ export default function Resume() {
           </Grid>
         </Grid>
       </Box>
-    </>
+    </div>
   );
 }

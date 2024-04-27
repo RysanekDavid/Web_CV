@@ -4,7 +4,7 @@ import ProjectSlider from "../components/ProjectComp/ProjectSlider";
 
 function Projects() {
   return (
-    <Box sx={{ mt: "5rem", textAlign: "center" }}>
+    <Box sx={{ textAlign: "center" }}>
       <Typography
         sx={{
           fontWeight: "bold",

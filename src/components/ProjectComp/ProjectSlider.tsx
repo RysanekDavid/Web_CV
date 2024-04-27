@@ -19,6 +19,7 @@ const ProjectSlider = () => {
         overflow: "hidden",
         ml: "1rem",
         mr: "1rem",
+        mb: { md: "10rem", xs: "8rem" },
       }}
     >
       <Swiper

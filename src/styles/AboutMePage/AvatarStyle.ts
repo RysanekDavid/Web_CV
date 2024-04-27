@@ -1,13 +1,13 @@
 const avatarStyle = {
   minWidth: {
-    xl: "25vh",
+    xl: "20vh",
     lg: "20vh",
     md: "20vh",
     sm: "20vh",
     xs: "16vh",
   },
   minHeight: {
-    xl: "25vh",
+    xl: "20vh",
     lg: "20vh",
     md: "20vh",
     sm: "20vh",

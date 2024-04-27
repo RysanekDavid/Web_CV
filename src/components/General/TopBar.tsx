@@ -5,13 +5,26 @@ import Container from "@mui/material/Container";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 
-const pages = ["About Me", "Resume", "Projects"];
-
 type Props = {
   selectedTab: number;
-  onTabChange: (index: number) => void;
+  onTabSelect: (sectionKey: "aboutMe" | "resume" | "projects") => void;
 };
-function ResponsiveTopBar({ selectedTab, onTabChange }: Props) {
+
+const pages = ["About Me", "Resume", "Projects"];
+const sectionKeys: ("aboutMe" | "resume" | "projects")[] = [
+  "aboutMe",
+  "resume",
+  "projects",
+]; // Ensuring type safety
+
+const ResponsiveTopBar = ({ selectedTab, onTabSelect }: Props) => {
+  const handleChange = (index: number) => {
+    const sectionKey = sectionKeys[index];
+    if (sectionKey) {
+      onTabSelect(sectionKey);
+    }
+  };
+
   return (
     <AppBar
       sx={{
@@ -38,7 +51,7 @@ function ResponsiveTopBar({ selectedTab, onTabChange }: Props) {
           >
             <Tabs
               value={selectedTab}
-              onChange={(_, newValue) => onTabChange(newValue)}
+              onChange={(_, newValue) => handleChange(newValue)}
               centered={true}
               textColor="inherit"
               sx={{
@@ -81,5 +94,5 @@ function ResponsiveTopBar({ selectedTab, onTabChange }: Props) {
       </Container>
     </AppBar>
   );
-}
+};
 export default ResponsiveTopBar;

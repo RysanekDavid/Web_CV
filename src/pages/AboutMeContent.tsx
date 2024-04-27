@@ -14,15 +14,14 @@ import {
   greetStyle,
   professionStyle,
 } from "../styles/AboutMePage/GreetAndProfessionStyle";
-//import { Fade } from "react-awesome-reveal";
+
+interface AboutMeProps {
+  onScrollToSection: (sectionKey: "resume" | "projects") => void;
+}
 
 const professions = ["Developer", "Designer", "Analyst"];
 
-type Props = {
-  visible: boolean;
-};
-
-export function AboutMe({ visible }: Props) {
+export function AboutMe({ onScrollToSection }: AboutMeProps) {
   const [professionIndex, setProfessionIndex] = useState(0);
   const [growVisible, setGrowVisible] = useState(true);
   const theme = useTheme();
@@ -40,12 +39,8 @@ export function AboutMe({ visible }: Props) {
     return () => clearInterval(interval);
   }, [professionIndex]);
 
-  if (!visible) {
-    return null;
-  }
-
   return (
-    <>
+    <Box sx={{ position: "relative" }}>
       <Box
         className="BgImg"
         sx={{
@@ -55,7 +50,7 @@ export function AboutMe({ visible }: Props) {
           backgroundRepeat: "no-repeat",
           minWidth: "100vw",
           position: "absolute",
-          minHeight: "100%",
+          minHeight: "90vh",
           top: 0,
           left: 0,
           zIndex: 0,
@@ -94,30 +89,26 @@ export function AboutMe({ visible }: Props) {
       <Box
         sx={{
           display: "flex",
-          flexDirection: { xs: "row", sm: "column" },
+          flexDirection: { xs: "row", lg: "column" },
           alignItems: "center",
           justifyContent: "center",
-          mb: { xl: 16, lg: 10, md: 8, sm: 10, xs: 20 },
+          mb: { xl: 12, lg: 10, md: 8, sm: 10, xs: 18 },
           zIndex: 2,
         }}
       >
         <Button
-          onClick={() => {
-            document
-              .getElementById("About_Me")
-              ?.scrollIntoView({ behavior: "smooth" });
-          }}
-          sx={{ ...buttonStyle, mr: { sm: 0, xs: 1 } }}
+          onClick={() => onScrollToSection("resume")}
+          sx={{ ...buttonStyle, mr: { lg: 0, xs: 1 } }}
         >
           {isSmallScreenOrDown ? "Resume" : "Show Resume"}
         </Button>
         <Button
-          onClick={() => {}}
-          sx={{ ...buttonStyle, ml: { sm: 0, xs: 1 } }}
+          onClick={() => onScrollToSection("projects")}
+          sx={{ ...buttonStyle, ml: { lg: 0, xs: 1 } }}
         >
           {isSmallScreenOrDown ? "Projects" : "Show Projects"}
         </Button>
       </Box>
-    </>
+    </Box>
   );
 }
